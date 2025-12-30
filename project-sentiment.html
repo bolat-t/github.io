@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Sentiment Analysis | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+    }
+  </style>
+</head>
+
+<body class="gradient-bg min-h-screen text-gray-200">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-purple-500/20">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-white">← Portfolio</a>
+    <div class="flex gap-6">
+      <a href="index.html#projects" class="hover:text-purple-400">Projects</a>
+      <a href="index.html#contact" class="hover:text-purple-400">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="pt-32 pb-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-5xl font-bold text-white mb-6">
+      Real-Time Sentiment Analysis
+    </h1>
+    <p class="text-xl text-gray-300 mb-8">
+      Streaming NLP pipeline analysing live social media data using transformer models.
+    </p>
+
+    <div class="flex flex-wrap gap-3">
+      <span class="bg-purple-600/20 text-purple-300 px-4 py-1.5 rounded-full text-sm">BERT</span>
+      <span class="bg-purple-600/20 text-purple-300 px-4 py-1.5 rounded-full text-sm">Kafka</span>
+      <span class="bg-purple-600/20 text-purple-300 px-4 py-1.5 rounded-full text-sm">Python</span>
+      <span class="bg-purple-600/20 text-purple-300 px-4 py-1.5 rounded-full text-sm">Docker</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="pb-24 px-6">
+  <div class="max-w-4xl mx-auto space-y-16">
+
+    <div>
+      <h2 class="text-3xl font-bold text-white mb-4">Problem Statement</h2>
+      <p class="text-gray-300">
+        Businesses need immediate insight into public sentiment to react to
+        product launches, outages, or brand crises in real time.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="text-3xl font-bold text-white mb-4">Architecture</h2>
+      <ul class="list-disc list-inside text-gray-300 space-y-2">
+        <li>Live data ingestion via Kafka</li>
+        <li>Text preprocessing and batching</li>
+        <li>BERT-based sentiment classification</li>
+        <li>Streaming output to dashboard and database</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-3xl font-bold text-white mb-4">Results</h2>
+      <ul class="list-disc list-inside text-gray-300 space-y-2">
+        <li>Processed 50,000+ messages per day</li>
+        <li>Achieved 90%+ classification accuracy</li>
+        <li>Latency under 2 seconds end-to-end</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-3xl font-bold text-white mb-4">Key Insights</h2>
+      <ul class="list-disc list-inside text-gray-300 space-y-2">
+        <li>Negative sentiment spikes strongly correlated with service outages</li>
+        <li>Neutral sentiment dominated outside peak news cycles</li>
+        <li>Positive sentiment increased after rapid response messaging</li>
+      </ul>
+    </div>
+
+    <div class="bg-slate-800/50 border border-purple-500/20 rounded-xl p-8 text-center">
+      <h3 class="text-2xl font-bold text-white mb-4">Explore Further</h3>
+      <div class="flex justify-center gap-6">
+        <a href="https://github.com/your-username/sentiment-analysis"
+           class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold">
+          View on GitHub
+        </a>
+        <a href="index.html"
+           class="border border-purple-500/40 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-600/20">
+          Back to Portfolio
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="py-10 text-center text-gray-400 border-t border-purple-500/20">
+  © 2025 Your Name · Data Science Portfolio
+</footer>
+
+</body>
+</html>
