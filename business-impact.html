@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Impact Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .modal { display: none; position: fixed; z-index: 50; left: 0; top: 0; width: 100%; height: 100%; overflow:auto; background-color: rgba(0,0,0,0.7); }
+    .modal-content { background-color: #1f2937; margin: 10% auto; padding: 0; border-radius: 1rem; max-width: 900px; position: relative; }
+  </style>
+</head>
+<body class="bg-slate-900 text-white">
+
+  <!-- NAVIGATION -->
+  <header class="p-6 flex justify-between items-center bg-slate-800/30">
+    <h1 class="text-3xl font-bold text-purple-400">Business Impact Projects</h1>
+    <a href="index.html" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition">← Back to Home</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="p-8 text-center bg-gradient-to-r from-purple-700 to-purple-900 mb-8 rounded-b-xl">
+    <h2 class="text-4xl font-bold mb-2">Projects Driving Business Impact</h2>
+    <p class="text-purple-200 text-lg">Data-driven solutions delivering measurable business results.</p>
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    
+    <!-- Project 1 -->
+    <div class="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 cursor-pointer transition" onclick="openModal('bi1')">
+      <h3 class="text-xl font-semibold text-white mb-2">Revenue Retention Analysis</h3>
+      <p class="text-gray-400">ML insights reduced churn and retained $2.3M revenue.</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 cursor-pointer transition" onclick="openModal('bi2')">
+      <h3 class="text-xl font-semibold text-white mb-2">Marketing Campaign Optimization</h3>
+      <p class="text-gray-400">Segmentation and targeting increased ROI by 25%.</p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 cursor-pointer transition" onclick="openModal('bi3')">
+      <h3 class="text-xl font-semibold text-white mb-2">Operational Efficiency</h3>
+      <p class="text-gray-400">Data dashboards reduced process bottlenecks by 30%.</p>
+    </div>
+
+  </section>
+
+  <!-- MODALS -->
+
+  <!-- Modal 1 -->
+  <div id="bi1" class="modal" onclick="closeModalOnOutside(event,'bi1')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button onclick="closeModal('bi1')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-4xl z-10">&times;</button>
+      <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-8 rounded-t-xl">
+        <h2 class="text-3xl font-bold text-white mb-2">Revenue Retention Analysis</h2>
+        <p class="text-purple-200">Business Impact & ML Insights</p>
+      </div>
+      <div class="p-8">
+        <p class="text-gray-300 mb-6">Identified high-risk churn customers using ML, enabling targeted retention campaigns that retained $2.3M in revenue.</p>
+        <a href="https://github.com/bolat-t" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg inline-block mr-4">View on GitHub</a>
+        <a href="project-churn.html" target="_blank" class="bg-purple-600/80 hover:bg-purple-700/80 text-white px-6 py-3 rounded-lg inline-block">View Full Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="bi2" class="modal" onclick="closeModalOnOutside(event,'bi2')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button onclick="closeModal('bi2')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-4xl z-10">&times;</button>
+      <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-8 rounded-t-xl">
+        <h2 class="text-3xl font-bold text-white mb-2">Marketing Campaign Optimization</h2>
+        <p class="text-purple-200">Segmentation & ROI</p>
+      </div>
+      <div class="p-8">
+        <p class="text-gray-300 mb-6">Applied data segmentation and analysis to improve targeting, resulting in a 25% increase in campaign ROI.</p>
+        <a href="https://github.com/bolat-t" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg inline-block mr-4">View on GitHub</a>
+        <a href="project-marketing.html" target="_blank" class="bg-purple-600/80 hover:bg-purple-700/80 text-white px-6 py-3 rounded-lg inline-block">View Full Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="bi3" class="modal" onclick="closeModalOnOutside(event,'bi3')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button onclick="closeModal('bi3')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-4xl z-10">&times;</button>
+      <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-8 rounded-t-xl">
+        <h2 class="text-3xl font-bold text-white mb-2">Operational Efficiency</h2>
+        <p class="text-purple-200">Process Improvement Dashboards</p>
+      </div>
+      <div class="p-8">
+        <p class="text-gray-300 mb-6">Created interactive dashboards tracking operational metrics, reducing bottlenecks by 30% and improving decision-making.</p>
+        <a href="https://github.com/bolat-t" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg inline-block mr-4">View on GitHub</a>
+        <a href="project-efficiency.html" target="_blank" class="bg-purple-600/80 hover:bg-purple-700/80 text-white px-6 py-3 rounded-lg inline-block">View Full Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SCRIPT -->
+  <script>
+    function openModal(id) { document.getElementById(id).style.display = 'block'; }
+    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+    function closeModalOnOutside(event, id) { if(event.target.id === id) closeModal(id); }
+  </script>
+
+</body>
+</html>
