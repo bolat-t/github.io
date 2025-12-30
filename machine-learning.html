@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .modal { display: none; position: fixed; z-index: 50; left: 0; top: 0; width: 100%; height: 100%; overflow:auto; background-color: rgba(0,0,0,0.7); }
+    .modal-content { background-color: #1f2937; margin: 10% auto; padding: 0; border-radius: 1rem; max-width: 900px; position: relative; }
+  </style>
+</head>
+<body class="bg-slate-900 text-white">
+
+  <!-- NAVIGATION -->
+  <header class="p-6 flex justify-between items-center bg-slate-800/30">
+    <h1 class="text-3xl font-bold text-purple-400">Machine Learning Projects</h1>
+    <a href="index.html" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition">← Back to Home</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="p-8 text-center bg-gradient-to-r from-purple-700 to-purple-900 mb-8 rounded-b-xl">
+    <h2 class="text-4xl font-bold mb-2">Explore My Machine Learning Projects</h2>
+    <p class="text-purple-200 text-lg">End-to-end ML pipelines, predictive models, and AI solutions.</p>
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    
+    <!-- Project 1 -->
+    <div class="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 cursor-pointer transition" onclick="openModal('ml1')">
+      <h3 class="text-xl font-semibold text-white mb-2">Customer Churn Prediction</h3>
+      <p class="text-gray-400">XGBoost model to predict telecom customer churn and retention.</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 cursor-pointer transition" onclick="openModal('ml2')">
+      <h3 class="text-xl font-semibold text-white mb-2">Sales Forecasting</h3>
+      <p class="text-gray-400">Time series models predicting monthly sales using Prophet and ARIMA.</p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 cursor-pointer transition" onclick="openModal('ml3')">
+      <h3 class="text-xl font-semibold text-white mb-2">Image Classification</h3>
+      <p class="text-gray-400">CNN model for classifying images into multiple categories using TensorFlow.</p>
+    </div>
+
+  </section>
+
+  <!-- MODALS -->
+
+  <!-- Modal 1 -->
+  <div id="ml1" class="modal" onclick="closeModalOnOutside(event,'ml1')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button onclick="closeModal('ml1')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-4xl z-10">&times;</button>
+      <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-8 rounded-t-xl">
+        <h2 class="text-3xl font-bold text-white mb-2">Customer Churn Prediction</h2>
+        <p class="text-purple-200">Machine Learning Classification</p>
+      </div>
+      <div class="p-8">
+        <p class="text-gray-300 mb-6">Built an end-to-end ML pipeline predicting high-risk churn customers using XGBoost and feature engineering. Applied SMOTE for class imbalance and optimized model hyperparameters.</p>
+        <a href="https://github.com/bolat-t" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg inline-block mr-4">View on GitHub</a>
+        <a href="project-churn.html" target="_blank" class="bg-purple-600/80 hover:bg-purple-700/80 text-white px-6 py-3 rounded-lg inline-block">View Full Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="ml2" class="modal" onclick="closeModalOnOutside(event,'ml2')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button onclick="closeModal('ml2')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-4xl z-10">&times;</button>
+      <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-8 rounded-t-xl">
+        <h2 class="text-3xl font-bold text-white mb-2">Sales Forecasting</h2>
+        <p class="text-purple-200">Time Series Prediction</p>
+      </div>
+      <div class="p-8">
+        <p class="text-gray-300 mb-6">Forecasted monthly sales using ARIMA and Prophet, enabling management to make data-driven inventory and marketing decisions.</p>
+        <a href="https://github.com/bolat-t" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg inline-block mr-4">View on GitHub</a>
+        <a href="project-forecasting.html" target="_blank" class="bg-purple-600/80 hover:bg-purple-700/80 text-white px-6 py-3 rounded-lg inline-block">View Full Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="ml3" class="modal" onclick="closeModalOnOutside(event,'ml3')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button onclick="closeModal('ml3')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-4xl z-10">&times;</button>
+      <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-8 rounded-t-xl">
+        <h2 class="text-3xl font-bold text-white mb-2">Image Classification</h2>
+        <p class="text-purple-200">Deep Learning</p>
+      </div>
+      <div class="p-8">
+        <p class="text-gray-300 mb-6">Trained a convolutional neural network using TensorFlow to classify images, achieving high accuracy with data augmentation and model tuning.</p>
+        <a href="https://github.com/bolat-t" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg inline-block mr-4">View on GitHub</a>
+        <a href="project-image-classification.html" target="_blank" class="bg-purple-600/80 hover:bg-purple-700/80 text-white px-6 py-3 rounded-lg inline-block">View Full Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SCRIPT -->
+  <script>
+    function openModal(id) { document.getElementById(id).style.display = 'block'; }
+    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+    function closeModalOnOutside(event, id) { if(event.target.id === id) closeModal(id); }
+  </script>
+
+</body>
+</html>
