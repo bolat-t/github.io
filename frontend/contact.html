@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Data Science Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(0,0,0,.6);
-    }
-  </style>
 </head>
 
 <body class="bg-neutral-950 text-neutral-200">
@@ -28,7 +23,7 @@
     <div class="flex gap-8 text-sm text-neutral-400">
       <a href="index.html" class="hover:text-teal-400">Home</a>
       <a href="about.html" class="hover:text-teal-400">About Me</a>
-      <a href="projects.html" class="hover:text-teal-400">Gallery</a>
+      <a href="gallery.html" class="hover:text-teal-400">Gallery</a>
       <a href="services.html" class="hover:text-teal-400">Services</a>
       <a href="contact.html" class="hover:text-teal-400 font-medium text-teal-400">Contact</a>
     </div>
@@ -36,100 +31,124 @@
 </nav>
 
 
-<!-- HERO -->
-<section class="pt-32 pb-16 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-    <h1 class="text-4xl md:text-5xl font-semibold text-neutral-100 mb-4">
-      Get In Touch
-    </h1>
-    <p class="text-neutral-400 max-w-2xl mx-auto">
-      Ready to turn data into actionable insights? Choose your preferred way to connect
-      and let’s discuss analytics, machine learning, or BI solutions.
-    </p>
+<!-- HERO with gradient background -->
+<section class="aws-hero-bg relative pt-48 pb-32 px-8 md:px-12">
+
+  <!-- dark overlay -->
+  <div class="aws-hero-overlay absolute inset-0 bg-black/40"></div>
+
+  <!-- content -->
+  <div class="aws-hero-content relative text-center">
+    <div class="max-w-4xl mx-auto space-y-10">
+
+      <div class="space-y-6">
+        <h1 class="text-4xl md:text-4xl font-semibold text-neutral-100">
+          Get In Touch
+        </h1>
+        <p class="text-neutral-300 max-w-2xl mx-auto text-lg leading-relaxed">
+          Ready to turn data into actionable insights? Choose your preferred way to connect
+          and let’s discuss analytics, machine learning, or BI solutions.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="pb-16 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl font-semibold text-neutral-100 mb-3">
-      Let’s Connect
-    </h2>
-    <p class="text-neutral-400">
-      Whether you’re looking for dashboards, predictive models, consulting, or collaboration,
-      I’m happy to chat.
-    </p>
-  </div>
+
+<section class="pt-12 pb-4 px-6 text-center">
+  <h2 class="text-2xl md:text-2xl font-semibold text-neutral-100 mb-3">
+    Let’s Connect
+  </h2>
+  <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+    Whether you’re looking for dashboards, predictive models, consulting, or collaboration,
+    I’m happy to chat.
+  </p>
 </section>
+
+
+
 
 <!-- CONTACT CARDS -->
-<section class="pb-24 px-6">
+<section class="pt-6 pb-28 px-6">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
 
     <!-- LinkedIn -->
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-      <div class="text-teal-400 text-3xl mb-4">in</div>
+    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
+      <div class="mb-4">
+        <img src="images/linkedin.svg" alt="LinkedIn" class="w-8 h-8 text-teal-400">
+      </div>
+
       <h3 class="text-lg font-medium text-neutral-100 mb-2">LinkedIn</h3>
       <p class="text-neutral-400 text-sm mb-6">
         Connect professionally and follow my work in data science,
         Power BI, and machine learning.
       </p>
-      <a href="https://www.linkedin.com"
-         class="inline-block text-sm px-5 py-2 rounded-md border border-teal-500/30
-                text-teal-300 hover:bg-teal-500/10 transition">
+
+      <a href="https://www.linkedin.com" class="mt-auto self-start inline-block text-sm px-5 py-2 rounded-md border border-blue-500/30
+                text-blue-300 hover:bg-blue-500/10 transition">
         Connect on LinkedIn
       </a>
     </div>
 
     <!-- GitHub -->
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-      <div class="text-neutral-300 text-3xl mb-4">⌂</div>
+    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
+      <div class="mb-4">
+        <img src="images/github.svg" alt="Github" class="w-8 h-8 text-teal-400">
+      </div>
+
       <h3 class="text-lg font-medium text-neutral-100 mb-2">GitHub</h3>
       <p class="text-neutral-400 text-sm mb-6">
         Explore my projects, code samples, notebooks,
         and data engineering workflows.
       </p>
-      <a href="https://github.com/bolat-t"
-         class="inline-block text-sm px-5 py-2 rounded-md border border-neutral-700
-                text-neutral-300 hover:border-neutral-500 transition">
+
+      <a href="https://github.com/bolat-t" class="mt-auto self-start inline-block text-sm px-5 py-2 rounded-md border border-purple-500/30
+                text-purple-300 hover:bg-purple-500/10 transition">
         View GitHub
       </a>
     </div>
 
     <!-- Microsoft Fabric -->
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-      <div class="text-purple-400 text-3xl mb-4">▦</div>
-      <h3 class="text-lg font-medium text-neutral-100 mb-2">
-        Microsoft Fabric Community
-      </h3>
+    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
+      <div class="mb-4">
+        <img src="images/fabric.svg" alt="Microsoft Fabric Community" class="w-8 h-8 text-teal-400">
+      </div>
+
+      <h3 class="text-lg font-medium text-neutral-100 mb-2">Microsoft Fabric Community</h3>
       <p class="text-neutral-400 text-sm mb-6">
         Community discussions, advanced tips, and insights on
         Power BI and Microsoft Fabric.
       </p>
-      <a href="https://community.fabric.microsoft.com/t5/user/viewprofilepage/user-id/1236430"
-         class="inline-block text-sm px-5 py-2 rounded-md border border-purple-500/30
-                text-purple-300 hover:bg-purple-500/10 transition">
+
+      <a href="https://community.fabric.microsoft.com/t5/user/viewprofilepage/user-id/1236430" class="mt-auto self-start inline-block text-sm px-5 py-2 rounded-md border border-teal-500/30
+                text-teal-300 hover:bg-teal-500/10 transition">
         Visit Community Profile
       </a>
     </div>
 
     <!-- Email -->
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-      <div class="text-amber-400 text-3xl mb-4">✉</div>
+    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
+      <div class="mb-4">
+        <img src="images/outlook.png" alt="Outlook" class="w-8 h-8 text-teal-400">
+      </div>
+
       <h3 class="text-lg font-medium text-neutral-100 mb-2">Email</h3>
       <p class="text-neutral-400 text-sm mb-6">
         Best for detailed project discussions, proposals,
         or formal collaboration inquiries.
       </p>
-      <a href="mailto:bolat_t@outlook.com"
-         class="inline-block text-sm px-5 py-2 rounded-md border border-amber-500/30
-                text-amber-300 hover:bg-amber-500/10 transition">
+
+      <a href="mailto:bolat_t@outlook.com" class="mt-auto self-start inline-block text-sm px-5 py-2 rounded-md border border-blue-500/30
+                text-blue-300 hover:bg-blue-500/10 transition">
         Send Email
       </a>
     </div>
 
   </div>
 </section>
+
+
 
 <!-- AVAILABILITY -->
 <section class="pb-24 px-6">
@@ -138,10 +157,10 @@
       Global Availability
     </h3>
     <p class="text-neutral-400 text-sm mb-4">
-      Available for remote projects worldwide • Timezone flexible
+      Available for remote projects worldwide • AEST Timezone
     </p>
     <div class="flex justify-center gap-6 text-xs text-neutral-500">
-      <span>Usually responds within 24 hours</span>
+      <span>Usually respond within 24-48 hours</span>
       <span>Remote collaboration expert</span>
     </div>
   </div>
@@ -154,3 +173,4 @@
 
 </body>
 </html>
+
