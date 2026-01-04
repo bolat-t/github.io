@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Churn Prediction | Data Science Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .6);
+    }
+
+    .accent-border {
+      border-left: 3px solid #2dd4bf;
+    }
+  </style>
+</head>
+
+<body class="bg-neutral-950 text-neutral-200">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-neutral-900/80 backdrop-blur border-b border-neutral-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-neutral-800 rounded-md flex items-center justify-center font-semibold text-teal-400">
+          DS
+        </div>
+        <span class="text-lg font-semibold text-neutral-100">Data Science Portfolio</span>
+      </div>
+      <div class="flex gap-8 text-sm text-neutral-400">
+        <a href="../index.html" class="hover:text-teal-400">Home</a>
+        <a href="../about.html" class="hover:text-teal-400">About Me</a>
+        <a href="../projects.html" class="hover:text-teal-400 text-teal-400 font-medium">Gallery</a>
+        <a href="../index.html#skills" class="hover:text-teal-400">Skills</a>
+        <a href="../index.contact.html" class="hover:text-teal-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BACK BUTTON -->
+  <div class="max-w-7xl mx-auto px-6 mt-28 mb-6">
+    <button onclick="history.back()"
+      class="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-teal-400 transition">
+      <span class="text-lg leading-none">←</span>
+      <span>Back</span>
+    </button>
+  </div>
+
+  <!-- AWS-STYLE GRADIENT HERO -->
+  <section class="relative overflow-hidden pt-24 pb-20 px-6">
+
+    <!-- Background -->
+    <div class="absolute inset-0">
+      <!-- Radial color layers -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]">
+      </div>
+
+      <!-- Base gradient -->
+      <div class="absolute inset-0 bg-gradient-to-r from-purple-900 via-fuchsia-800 to-rose-700 opacity-90"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <p class="text-sm text-purple-200 mb-3 uppercase tracking-wide">
+        Machine Learning Project
+      </p>
+
+      <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6">
+        Customer Churn Prediction
+      </h1>
+
+      <p class="text-xl text-purple-100 mb-6">
+        Predicting customer attrition to support proactive retention strategies
+      </p>
+
+      <p class="text-purple-100/90 leading-relaxed max-w-3xl">
+        This project focuses on identifying customers at risk of churn using supervised
+        machine learning models. It demonstrates end-to-end data science workflows,
+        from feature engineering and model training to business interpretation
+        and dashboarding.
+      </p>
+    </div>
+
+    <!-- Fade into page -->
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
+  </section>
+
+  <!-- STATUS -->
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 accent-border">
+        <p class="text-teal-400 font-medium mb-1">
+          🚧 Project Status
+        </p>
+        <p class="text-neutral-400 text-sm">
+          This project page is currently a placeholder. Detailed analysis, model results,
+          and dashboards will be added soon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT GRID -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+        <h3 class="text-neutral-100 font-medium mb-3">Business Problem</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Customer churn directly impacts revenue and growth. The goal is to predict
+          which customers are likely to churn so that targeted retention strategies
+          can be applied before loss occurs.
+        </p>
+      </div>
+
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+        <h3 class="text-neutral-100 font-medium mb-3">Dataset</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Historical customer data including demographics, usage behaviour,
+          contract details, and service interactions.
+        </p>
+      </div>
+
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+        <h3 class="text-neutral-100 font-medium mb-3">Models (Planned)</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Logistic Regression, Random Forest, and Gradient Boosting models
+          evaluated using ROC-AUC and business-aligned metrics.
+        </p>
+      </div>
+
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+        <h3 class="text-neutral-100 font-medium mb-3">Outputs</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Model evaluation, feature importance analysis,
+          and an executive-ready churn dashboard.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PLACEHOLDER VISUAL -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+        <div class="aspect-video bg-neutral-800 flex items-center justify-center text-neutral-400 text-sm">
+          Dashboard / Model Visuals Coming Soon
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-neutral-800 py-12 text-center">
+    <p class="text-neutral-500 text-sm mb-4">
+      © 2026 Bolat Tulekov
+    </p>
+    <div class="flex justify-center gap-6 text-sm">
+      <a href="https://github.com/bolat-t" class="text-neutral-400 hover:text-teal-400">GitHub</a>
+      <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

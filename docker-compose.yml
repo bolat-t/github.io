@@ -1,0 +1,25 @@
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    image: githubio-frontend:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - node-api
+      - python-service
+
+  node-api:
+    build:
+      context: ./node-api
+    image: githubio-node-api:latest
+    ports:
+      - "3000:3000"
+
+  python-service:
+    build:
+      context: ./python-service
+    image: githubio-python-service:latest
+    ports:
+      - "8000:8000"

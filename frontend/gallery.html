@@ -1,0 +1,168 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gallery - Data Science Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-neutral-950 text-neutral-200">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full bg-neutral-900/60 backdrop-blur border-b border-neutral-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-neutral-800 rounded-md flex items-center justify-center font-semibold text-teal-400">
+                DS
+            </div>
+            <span class="text-lg font-semibold text-neutral-100">Data Science Portfolio</span>
+        </div>
+        <div class="flex gap-8 text-sm text-neutral-400">
+            <a href="index.html" class="hover:text-teal-400 ">Home</a>
+            <a href="about.html" class="hover:text-teal-400 ">About Me</a>
+            <a href="gallery.html" class="hover:text-teal-400 font-medium text-teal-400">Gallery</a>
+            <a href="services.html" class="hover:text-teal-400">Services</a>
+            <a href="contact.html" class="hover:text-teal-400">Contact</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Page Header -->
+<section class="aws-hero-bg relative px-6 pt-56 pb-24 fade-in">
+
+    <!-- dark overlay -->
+    <div class="aws-hero-overlay absolute inset-0 bg-black/40 z-0"></div>
+
+    <!-- content ABOVE overlay -->
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Dashboard Gallery
+        </h1>
+        <p class="text-neutral-400 leading-relaxed">
+            Explore a collection of interactive business dashboards and data visualizations built with Power BI, Excel,
+            and Figma.
+        </p>
+    </div>
+<div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
+
+</section>
+
+
+
+<!-- Filters/Search -->
+<section class="px-6 pt-10 mb-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 items-center">
+        <input type="text" placeholder="Search dashboards..."
+            class="flex-1 px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-purple-500">
+
+        <select
+            class="px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <option>All Categories</option>
+            <option>Power BI</option>
+            <option>Excel</option>
+            <option>Figma</option>
+        </select>
+
+        <select
+            class="px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <option>Newest</option>
+            <option>Oldest</option>
+        </select>
+    </div>
+</section>
+
+
+    <!-- Dashboard Grid -->
+    <section class="px-6 mb-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dashboard Card -->
+            <a href="projects/dashboard1.html"
+                class="bg-neutral-800 rounded-lg overflow-hidden card-hover border border-neutral-700 transition">
+                <img src="images/dashboard1.png" alt="Financial Performance Dashboard" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-white mb-1">Financial Performance Dashboard</h3>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded-lg tag">PowerBI</span>
+                        <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded-lg tag">Figma</span>
+                        <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded-lg tag">Excel</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Duplicate this card for other dashboards -->
+            <a href="projects/dashboard2.html"
+                class="bg-neutral-800 rounded-lg overflow-hidden card-hover border border-neutral-700 transition">
+                <img src="images/dashboard2.png" alt="Executive Performance Dashboard" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-white mb-1">Executive Performance Dashboard</h3>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded-lg tag">PowerBI</span>
+                        <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded-lg tag">PowerPoint</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Add more cards here -->
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="px-6 mb-12">
+        <div class="max-w-7xl mx-auto flex justify-center gap-2">
+            <button
+                class="px-4 py-2 rounded-md bg-neutral-800 border border-neutral-700 hover:bg-purple-600/20 transition">Previous</button>
+            <button class="px-4 py-2 rounded-md bg-purple-600 text-white hover:bg-purple-700 transition">1</button>
+            <button
+                class="px-4 py-2 rounded-md bg-neutral-800 border border-neutral-700 hover:bg-purple-600/20 transition">2</button>
+            <button
+                class="px-4 py-2 rounded-md bg-neutral-800 border border-neutral-700 hover:bg-purple-600/20 transition">3</button>
+            <button
+                class="px-4 py-2 rounded-md bg-neutral-800 border border-neutral-700 hover:bg-purple-600/20 transition">Next</button>
+        </div>
+    </section>
+
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
+
+</html>
