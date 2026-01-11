@@ -482,27 +482,19 @@ function analyzeMockSentiment(text) {
 </script>
 
 <script>
-  // Load nav dynamically
-  fetch('/docs/nav.html')
+  fetch('../nav.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('nav-placeholder').innerHTML = data;
-
-      // Now initialize the hamburger
       initNav();
-
-      // Optional: highlight active link
       const current = location.pathname.split("/").pop();
       document.querySelectorAll('#nav-placeholder a').forEach(a => {
-        if (a.getAttribute('href') === current) {
-          a.classList.add('text-teal-400', 'font-medium');
-        } else {
-          a.classList.remove('text-teal-400', 'font-medium');
-        }
+        if (a.getAttribute('href') === current) a.classList.add('text-teal-400', 'font-medium');
+        else a.classList.remove('text-teal-400', 'font-medium');
       });
     });
 </script>
-<script src="/docs/nav.js"></script>
+<script src="../nav.js"></script>
 
 
 </body>
