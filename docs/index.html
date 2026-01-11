@@ -9,27 +9,50 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const bars = menuBtn.querySelectorAll(".bar");
+    const links = mobileMenu.querySelectorAll("a");
 
-<body class="bg-neutral-950 text-neutral-200">
+    let open = false;
 
-<!-- NAV -->
-<nav class="fixed top-0 w-full bg-neutral-900/60 backdrop-blur border-b border-neutral-800 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <div class="w-9 h-9 bg-neutral-800 rounded-md flex items-center justify-center font-semibold text-teal-400">
-        DS
-      </div>
-      <span class="text-lg font-semibold text-neutral-100">Data Science Portfolio</span>
-    </div>
-    <div class="flex gap-8 text-sm text-neutral-400">
-      <a href="index.html" class="hover:text-teal-400 font-medium text-teal-400">Home</a>
-      <a href="about.html" class="hover:text-teal-400 ">About Me</a>
-      <a href="gallery.html" class="hover:text-teal-400">Gallery</a>
-      <a href="services.html" class="hover:text-teal-400">Services</a>
-      <a href="contact.html" class="hover:text-teal-400">Contact</a>
-    </div>
-  </div>
-</nav>
+    menuBtn.addEventListener("click", () => {
+      open = !open;
+
+      // Slide menu
+      mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + "px" : "0px";
+
+      // Animate hamburger to X
+      bars[0].style.transform = open ? "rotate(45deg) translate(5px, 5px)" : "";
+      bars[1].style.opacity = open ? "0" : "1";
+      bars[2].style.transform = open ? "rotate(-45deg) translate(5px, -5px)" : "";
+    });
+
+    // Close menu on link click
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        open = false;
+        mobileMenu.style.maxHeight = "0px";
+        bars[0].style.transform = "";
+        bars[1].style.opacity = "1";
+        bars[2].style.transform = "";
+      });
+    });
+  });
+</script>
+
+
+
+
+<body class="bg-neutral-950 text-neutral-200 pt-20">
+
+
+<div id="nav-placeholder"></div>
+
+
+
 
 
 <!-- HERO -->
@@ -66,7 +89,7 @@
             class="bg-teal-500/10 text-teal-300 border border-teal-500/30 px-8 py-3 rounded-md text-sm font-medium hover:bg-teal-500/20 transition">
             View Work
           </a>
-          <a href="#contact"
+          <a href="contact.html"
             class="border border-neutral-700 text-neutral-300 px-8 py-3 rounded-md text-sm hover:border-neutral-500 transition">
             Contact
           </a>
@@ -221,8 +244,8 @@
           class="block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
                   hover:border-teal-500/40 transition">
 
-            <div class="bg-neutral-800 aspect-video flex items-center justify-center text-teal-400 text-sm font-medium">
-                ML
+            <div class="bg-neutral-800 aspect-video flex items-center justify-center">
+              <img src="images/churn.png" alt="Churn Prediction" class="w-24 h-24" />
             </div>
 
             <div class="p-4">
@@ -406,6 +429,31 @@
         <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
     </div>
 </footer>
+
+<script>
+  // Load nav dynamically
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+
+      // Now initialize the hamburger
+      initNav();
+
+      // Optional: highlight active link
+      const current = location.pathname.split("/").pop();
+      document.querySelectorAll('#nav-placeholder a').forEach(a => {
+        if (a.getAttribute('href') === current) {
+          a.classList.add('text-teal-400', 'font-medium');
+        } else {
+          a.classList.remove('text-teal-400', 'font-medium');
+        }
+      });
+    });
+</script>
+<script src="nav.js"></script>
+
+
 
 </body>
 </html>

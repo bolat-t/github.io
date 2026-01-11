@@ -1,0 +1,44 @@
+<!-- nav.html -->
+<nav class="fixed top-0 w-full bg-neutral-900/70 backdrop-blur border-b border-neutral-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-neutral-800 rounded-md flex items-center justify-center font-semibold text-teal-400">
+                DS
+            </div>
+            <span class="text-lg font-semibold text-neutral-100">
+                Data Science Portfolio
+            </span>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex gap-8 text-sm text-neutral-400">
+            <a href="index.html" class="text-teal-400 font-medium">Home</a>
+            <a href="about.html" class="hover:text-teal-400">About Me</a>
+            <a href="gallery.html" class="hover:text-teal-400">Gallery</a>
+            <a href="services.html" class="hover:text-teal-400">Services</a>
+            <a href="contact.html" class="hover:text-teal-400">Contact</a>
+        </div>
+
+        <!-- Hamburger -->
+        <button id="menuBtn" class="md:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"
+            aria-label="Toggle menu">
+            <span class="bar w-6 h-0.5 bg-neutral-300 transition-all"></span>
+            <span class="bar w-6 h-0.5 bg-neutral-300 transition-all"></span>
+            <span class="bar w-6 h-0.5 bg-neutral-300 transition-all"></span>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="md:hidden overflow-hidden max-h-0 transition-all duration-300 ease-out bg-neutral-900/95 backdrop-blur border-t border-neutral-800">
+        <div class="px-6 py-6 flex flex-col gap-5 text-sm text-neutral-300">
+            <a href="index.html" class="text-teal-400 font-medium">Home</a>
+            <a href="about.html" class="hover:text-teal-400">About Me</a>
+            <a href="gallery.html" class="hover:text-teal-400">Gallery</a>
+            <a href="services.html" class="hover:text-teal-400">Services</a>
+            <a href="contact.html" class="hover:text-teal-400">Contact</a>
+        </div>
+    </div>
+</nav>
