@@ -253,36 +253,17 @@ print(f"Confidence: {result['confidence']:.2f}")
   <div class="max-w-5xl mx-auto">
     <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Interactive Demo</h2>
     
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-8">
-      <h3 class="text-lg font-medium text-neutral-100 mb-4">Try the Sentiment Analyzer</h3>
-      
-      <textarea id="textInput" 
-                class="w-full bg-neutral-950 border border-neutral-700 rounded-lg p-4 text-neutral-200 focus:border-teal-500 focus:outline-none mb-4" 
-                rows="4" 
-                placeholder="Enter text to analyze sentiment... (e.g., 'This product is amazing and exceeded my expectations!')"></textarea>
-      
-      <button id="analyzeBtn" 
-              class="bg-teal-500 hover:bg-teal-400 text-neutral-950 px-6 py-3 rounded-lg font-medium transition">
-        Analyze Sentiment
-      </button>
+<!-- Replace YOUR-SUBDOMAIN with your app's subdomain -->
+<div style="position:relative;padding-top:60vh;">
+  <iframe
+    src="https://sentiment-analysis-portfolio-a4jbn7zemnszxrqg6jjdg6.streamlit.app/?embed=true"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+    allow="fullscreen"
+    loading="lazy">
+  </iframe>
+</div>
 
-      <div id="results" class="mt-6 hidden">
-        <h4 class="text-neutral-100 font-medium mb-3">Analysis Results:</h4>
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-neutral-950 border border-neutral-700 rounded-lg p-4">
-            <div class="text-sm text-neutral-400 mb-1">Ensemble Prediction</div>
-            <div id="ensembleSentiment" class="text-2xl font-bold"></div>
-            <div id="ensembleConfidence" class="text-sm text-neutral-400 mt-1"></div>
-          </div>
-          <div class="bg-neutral-950 border border-neutral-700 rounded-lg p-4">
-            <div class="text-sm text-neutral-400 mb-2">Model Agreement</div>
-            <div id="modelAgreement" class="space-y-1"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- VISUALIZATIONS -->
