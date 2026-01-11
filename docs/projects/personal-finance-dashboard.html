@@ -36,13 +36,29 @@
 </section>
 
 <section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto bg-neutral-900 border border-neutral-800 p-6 rounded-lg">
-    <p class="text-indigo-400 font-medium mb-1">🚧 Project Status</p>
-    <p class="text-neutral-400 text-sm">
-      Placeholder page — dashboard visuals and metrics coming soon.
-    </p>
+  <div class="max-w-5xl mx-auto bg-neutral-900 border border-neutral-800 p-6 rounded-xl shadow-lg">
+
+    <!-- Header -->
+    <div class="mb-4">
+      <p class="text-indigo-400 font-semibold text-sm uppercase tracking-wide flex items-center gap-2">
+        🚧 Project Status
+      </p>
+      <p class="text-neutral-400 text-sm mt-1">
+        Placeholder page — dashboard visuals and metrics coming soon.
+      </p>
+    </div>
+
+    <!-- Responsive iframe container -->
+    <div class="relative w-full pb-[62.25%] overflow-hidden rounded-lg border border-neutral-800 shadow-md">
+      <iframe title="Beach Dashboard"
+        src="https://app.powerbi.com/view?r=eyJrIjoiZDQzOGIyNTItMWQ2Yy00NTQyLThiMzAtOGExYTQyODdiM2NjIiwidCI6IjM0NTBlNzcwLWU1ODAtNDgwYi1iNWVmLTNjMjBlMzVkYmE0ZSJ9"
+        class="absolute top-0 left-0 w-full h-full border-0 rounded-lg" allowfullscreen="true">
+      </iframe>
+    </div>
+
   </div>
 </section>
+
 
 <section class="pb-24 px-6">
   <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
@@ -76,6 +92,8 @@
         Spending patterns, savings trends, and category-level breakdowns.
       </p>
     </div>
+
+    
 
   </div>
 </section>
