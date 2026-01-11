@@ -8,15 +8,9 @@
 </head>
 
 <body class="bg-neutral-950 text-neutral-200">
+<div id="nav-placeholder"></div>
 
-<!-- NAV -->
-<nav class="fixed top-0 w-full bg-neutral-900/80 backdrop-blur border-b border-neutral-800 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <span class="text-lg font-semibold text-neutral-100">
-      Data Science Portfolio
-    </span>
-  </div>
-</nav>
+
 
 
 <!-- BACK BUTTON -->
@@ -89,6 +83,29 @@
 <footer class="border-t border-neutral-800 py-10 text-center text-sm text-neutral-500">
   © 2026 Bolat Tulekov
 </footer>
+<script>
+  // Load nav dynamically
+  fetch('/docs/nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+
+      // Now initialize the hamburger
+      initNav();
+
+      // Optional: highlight active link
+      const current = location.pathname.split("/").pop();
+      document.querySelectorAll('#nav-placeholder a').forEach(a => {
+        if (a.getAttribute('href') === current) {
+          a.classList.add('text-teal-400', 'font-medium');
+        } else {
+          a.classList.remove('text-teal-400', 'font-medium');
+        }
+      });
+    });
+</script>
+<script src="/docs/nav.js"></script>
+
 
 </body>
 </html>
