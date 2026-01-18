@@ -35,6 +35,7 @@ function initNav() {
       bars[2].style.transform = "";
     });
   });
+  
 
   // ---------- Active link highlighting ----------
   // Get current page, handling both root and nested paths
@@ -53,10 +54,10 @@ function initNav() {
     const linkPage = link.getAttribute("href").split("/").pop();
     
     if (!isProjectPage && linkPage === currentPage) {
-      link.classList.add("text-teal-400", "font-medium");
+      link.classList.add("text-teal-400", "font-medium", "underline", "decoration-2", "underline-offset-4");
       link.classList.remove("text-neutral-400");
     } else {
-      link.classList.remove("text-teal-400", "font-medium");
+      link.classList.remove("text-teal-400", "font-medium", "underline", "decoration-2", "underline-offset-4");
       link.classList.add("text-neutral-400");
     }
   });
