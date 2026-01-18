@@ -6,7 +6,6 @@ function initNav() {
   if (!menuBtn || !mobileMenu) return;
 
   const bars = menuBtn.querySelectorAll(".bar");
-  const allLinks = document.querySelectorAll("#nav-placeholder a");
 
   let open = false;
 
@@ -38,31 +37,53 @@ function initNav() {
   });
 
   // ---------- Active link highlighting ----------
-  const current = location.pathname
-    .split("/")
-    .pop() || "index.html";
+  // Get current page, handling both root and nested paths
+  let currentPage = location.pathname.split("/").pop() || "index.html";
+  
+  // If we're at the root with no filename, it's index.html
+  if (currentPage === "" || currentPage === "/") {
+    currentPage = "index.html";
+  }
 
-  document
-    .querySelectorAll("#nav-placeholder a")
-    .forEach(link => {
-      const linkPage = link
-        .getAttribute("href")
-        .split("/")
-        .pop();
+  // Handle project pages - they should not highlight any main nav item
+  const isProjectPage = location.pathname.includes("/projects/");
 
-      if (linkPage === current) {
-        link.classList.add(
-          "text-teal-400",
-          "relative",
-          "after:absolute",
-          "after:-bottom-1",
-          "after:left-0",
-          "after:w-full",
-          "after:h-[2px]",
-          "after:bg-teal-400"
-        );
-
-      }
-    });
+  // Desktop nav links
+  document.querySelectorAll(".nav-link").forEach(link => {
+    const linkPage = link.getAttribute("href").split("/").pop();
     
+    if (!isProjectPage && linkPage === currentPage) {
+      link.classList.add("text-teal-400", "font-medium");
+      link.classList.remove("text-neutral-400");
+    } else {
+      link.classList.remove("text-teal-400", "font-medium");
+      link.classList.add("text-neutral-400");
+    }
+  });
+
+  // Mobile nav links - with inline underline instead of full-width
+  document.querySelectorAll(".nav-link-mobile").forEach(link => {
+    const linkPage = link.getAttribute("href").split("/").pop();
+    
+    if (!isProjectPage && linkPage === currentPage) {
+      link.classList.add(
+        "text-teal-400",
+        "font-medium",
+        "inline-block",
+        "border-b-2",
+        "border-teal-400",
+        "pb-1"
+      );
+      link.classList.remove("text-neutral-300");
+    } else {
+      link.classList.remove(
+        "text-teal-400",
+        "font-medium",
+        "border-b-2",
+        "border-teal-400",
+        "pb-1"
+      );
+      link.classList.add("text-neutral-300");
+    }
+  });
 }
