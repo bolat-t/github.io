@@ -239,17 +239,29 @@ print(f"Confidence: {result['confidence']:.2f}")
 <!-- INTERACTIVE DEMO -->
 <section class="pb-16 px-6">
   <div class="max-w-5xl mx-auto">
+    <!-- Section title with extra padding below -->
     <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Interactive Demo</h2>
-    
-<!-- Replace YOUR-SUBDOMAIN with your app's subdomain -->
-<div style="position:relative;padding-top:60vh;">
-  <iframe
-    src="https://sentiment-analysis-portfolio-a4jbn7zemnszxrqg6jjdg6.streamlit.app/?embed=true"
-    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-    allow="fullscreen"
-    loading="lazy">
-  </iframe>
-</div>
+
+    <!-- Optional wake-up / open full app button -->
+    <div class="mb-4 text-center">
+      <p class="text-neutral-400 mb-2">
+        The app may take a few seconds to load. Click below to wake it up or open in a new tab.
+      </p>
+      <a href="https://sentiment-analysis-portfolio-a4jbn7zemnszxrqg6jjdg6.streamlit.app" target="_blank"
+        class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
+        Wake Up / Open Full Demo
+      </a>
+    </div>
+
+    <!-- Preview iframe -->
+    <div style="position:relative;padding-top:60vh; margin-top:1rem;">
+      <iframe src="https://sentiment-analysis-portfolio-a4jbn7zemnszxrqg6jjdg6.streamlit.app/?embed=true"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="fullscreen" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -289,7 +301,9 @@ print(f"Confidence: {result['confidence']:.2f}")
 </section>
 
 
-    <!-- Key Insights -->
+<!-- Key Insights -->
+<section class="pb-16 px-6">
+  <div class="max-w-5xl mx-auto">
     <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 mt-6">
       <h3 class="text-neutral-100 font-medium mb-4">Key Insights</h3>
       <ul class="space-y-2 text-sm text-neutral-400">
@@ -301,7 +315,6 @@ print(f"Confidence: {result['confidence']:.2f}")
     </div>
   </div>
 </section>
-``
 
 
 <!-- TECHNICAL STACK -->
