@@ -70,7 +70,7 @@ function initNav() {
       link.classList.add(
         "text-teal-400",
         "font-medium",
-        "border-l-3",
+        "border-l-4",
         "border-teal-400",
         "pl-3",
         "-ml-3"
@@ -80,7 +80,7 @@ function initNav() {
       link.classList.remove(
         "text-teal-400",
         "font-medium",
-        "border-l-3",
+        "border-l-4",
         "border-teal-400",
         "pl-3",
         "-ml-3"

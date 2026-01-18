@@ -7,16 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="/docs/nav.js"></script>
-<script src="nav.js"></script>
-<script>
-  fetch('nav.html')
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById('nav-placeholder').innerHTML = html;
-      initNav();
-    });
-</script>
 
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
@@ -145,29 +135,23 @@
     <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
   </div>
 </footer>
-<script>
-  // Load nav dynamically
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
 
-      // Now initialize the hamburger
-      initNav();
+<!-- Placeholder for nav -->
+<div id="nav-placeholder"></div>
 
-      // Optional: highlight active link
-      const current = location.pathname.split("/").pop();
-      document.querySelectorAll('#nav-placeholder a').forEach(a => {
-        if (a.getAttribute('href') === current) {
-          a.classList.add('text-teal-400', 'font-medium');
-        } else {
-          a.classList.remove('text-teal-400', 'font-medium');
-        }
-      });
-    });
-</script>
+<!-- Scripts -->
 <script src="nav.js"></script>
-
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+        initNav(); // Initialize mobile menu and active link highlighting
+      })
+      .catch(err => console.error("Failed to load nav:", err));
+  });
+</script>
 
 
 </body>

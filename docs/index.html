@@ -388,84 +388,45 @@
 
 <!-- FOOTER -->
 <footer id="contact" class="border-t border-neutral-800 py-12 text-center">
-    <p class="text-neutral-500 text-sm mb-4">
-        © 2026 Bolat Tulekov
-    </p>
-    <div class="flex justify-center gap-6 text-sm">
-        <a href="https://github.com/bolat-t" class="text-neutral-400 hover:text-teal-400">GitHub</a>
-        <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
-    </div>
+  <p class="text-neutral-500 text-sm mb-4">
+    © 2026 Bolat Tulekov
+  </p>
+  <div class="flex justify-center gap-6 text-sm">
+    <a href="https://github.com/bolat-t" class="text-neutral-400 hover:text-teal-400">GitHub</a>
+    <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
+  </div>
 </footer>
 
-<script>
-  // Load nav dynamically
-  fetch('/nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
+<!-- Placeholder for nav -->
+<div id="nav-placeholder"></div>
 
-      // Now initialize the hamburger
-      initNav();
-
-      // Optional: highlight active link
-      const current = location.pathname.split("/").pop();
-      document.querySelectorAll('#nav-placeholder a').forEach(a => {
-        if (a.getAttribute('href') === current) {
-          a.classList.add('text-teal-400', 'font-medium');
-        } else {
-          a.classList.remove('text-teal-400', 'font-medium');
-        }
-      });
-    });
-</script>
+<!-- Scripts -->
 <script src="nav.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const bars = menuBtn.querySelectorAll(".bar");
-    const links = mobileMenu.querySelectorAll("a");
+  // Load nav dynamically and initialize hamburger + active link
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+        initNav(); // Handles hamburger + active link highlighting
+      })
+      .catch(err => console.error("Failed to load nav:", err));
 
-    let open = false;
-
-    menuBtn.addEventListener("click", () => {
-      open = !open;
-
-      // Slide menu
-      mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + "px" : "0px";
-
-      // Animate hamburger to X
-      bars[0].style.transform = open ? "rotate(45deg) translate(5px, 5px)" : "";
-      bars[1].style.opacity = open ? "0" : "1";
-      bars[2].style.transform = open ? "rotate(-45deg) translate(5px, -5px)" : "";
-    });
-
-    // Close menu on link click
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        open = false;
-        mobileMenu.style.maxHeight = "0px";
-        bars[0].style.transform = "";
-        bars[1].style.opacity = "1";
-        bars[2].style.transform = "";
+    // Intersection Observer for reveal animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
       });
-    });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   });
 </script>
-
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-</script>
 </body>
+
 </html>
+
 
 
 
