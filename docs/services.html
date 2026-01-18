@@ -125,35 +125,32 @@
 
   </div>
 </section>
-<!-- FOOTER -->
-<footer id="contact" class="border-t border-neutral-800 py-12 text-center">
-  <p class="text-neutral-500 text-sm mb-4">
-    © 2026 Bolat Tulekov
-  </p>
-  <div class="flex justify-center gap-6 text-sm">
-    <a href="https://github.com/bolat-t" class="text-neutral-400 hover:text-teal-400">GitHub</a>
-    <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
-  </div>
-</footer>
 
-<!-- Placeholder for nav -->
-<div id="nav-placeholder"></div>
-
-<!-- Scripts -->
-<script src="nav.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('nav-placeholder').innerHTML = html;
-        initNav(); // Initialize mobile menu and active link highlighting
-      })
-      .catch(err => console.error("Failed to load nav:", err));
-  });
-</script>
-
-
-</body>
-
-</html>
+  <!-- FOOTER -->
+  <footer id="contact" class="border-t border-neutral-800 py-12 text-center">
+    <p class="text-neutral-500 text-sm mb-4">
+      © 2026 Bolat Tulekov
+    </p>
+    <div class="flex justify-center gap-6 text-sm">
+      <a href="https://github.com/bolat-t" class="text-neutral-400 hover:text-teal-400">GitHub</a>
+      <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('nav-placeholder').innerHTML = html;
+          initNav(); // Handles hamburger toggle and active link highlighting
+        })
+        .catch(err => console.error("Failed to load nav:", err));
+    });
+  </script>
+  
+  </body>
+  
+  </html>
