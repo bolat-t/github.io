@@ -8,15 +8,6 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
-<script src="nav.js"></script>
-<script>
-  fetch('/nav.html')
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById('nav-placeholder').innerHTML = html;
-      initNav();
-    });
-</script>
 
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
@@ -163,33 +154,27 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer class="border-t border-neutral-800 py-10 text-center text-sm text-neutral-500">
   © 2026 Bolat Tulekov
 </footer>
 
-<script>
-  // Load nav dynamically
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
+<!-- Placeholder for nav -->
+<div id="nav-placeholder"></div>
 
-      // Now initialize the hamburger
-      initNav();
-
-      // Optional: highlight active link
-      const current = location.pathname.split("/").pop();
-      document.querySelectorAll('#nav-placeholder a').forEach(a => {
-        if (a.getAttribute('href') === current) {
-          a.classList.add('text-teal-400', 'font-medium');
-        } else {
-          a.classList.remove('text-teal-400', 'font-medium');
-        }
-      });
-    });
-</script>
+<!-- Load nav dynamically -->
 <script src="nav.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('/nav.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+        initNav(); // initialize hamburger menu & active link highlighting
+      });
+  });
+</script>
+
 
 
 </body>

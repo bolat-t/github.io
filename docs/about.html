@@ -7,15 +7,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<script src="nav.js"></script>
-<script>
-  fetch('/nav.html')
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById('nav-placeholder').innerHTML = html;
-      initNav();
-    });
-</script>
 
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
@@ -245,7 +236,16 @@
       });
     });
 </script>
+
 <script src="nav.js"></script>
+<script>
+  fetch('/nav.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+      initNav();
+    });
+</script>
 
 </body>
 </html>
