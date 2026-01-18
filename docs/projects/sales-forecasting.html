@@ -68,11 +68,11 @@
     <!-- Content -->
     <div class="relative z-10 max-w-5xl mx-auto">
       <p class="text-sm text-purple-200 mb-3 uppercase tracking-wide">
-        Forecasting & BI
+        Data Engineering & BI
       </p>
 
       <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6">
-        DemandAI: Sales Forecasting
+        DemandAI: Sales Data Platform
       </h1>
 
       <p class="text-xl text-purple-100 mb-6">
@@ -81,8 +81,8 @@
       </p>
 
       <p class="text-purple-100/90 leading-relaxed max-w-3xl">
-        Optimising inventory levels with Prophet & ARIMA ensemble models. An automated forecasting engine balancing
-        seasonality and trend for supply chain efficiency.
+        A production-grade Lakehouse architecture on Databricks. Transforming raw chaotic logs into trusted Gold-level
+        business intelligence assets.
       </p>
     </div>
 
@@ -100,8 +100,9 @@
 
 
         <p class="text-neutral-400 leading-relaxed">
-          A solution addressing overstocking and stockouts which were costing the business 12% in potential margin.
-          Moving from brittle Excel sheets to an automated Python-based forecasting engine.
+          Processing 10GB+ of daily transaction logs into a query-ready Delta Lake.
+          Implemented a Medallion Architecture (Bronze -> Silver -> Gold) to ensure data quality and auditability for
+          downstream BI teams.
         </p>
 
       </div>
@@ -116,17 +117,16 @@
       <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
         <h3 class="text-neutral-100 font-medium mb-3">Business Objective</h3>
         <p class="text-neutral-400 text-sm leading-relaxed">
-          Overstocking and stockouts were costing the business 12% in potential margin.
-          Excel-based forecasts were brittle, manual, and unable to scale with SKU growth.
+          Sales reports took 4 days to generate due to manual CSV mashing.
+          Data inconsistencies between regional teams led to "truth wars" in executive meetings.
         </p>
       </div>
 
       <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
         <h3 class="text-neutral-100 font-medium mb-3">Technical Objective</h3>
         <p class="text-neutral-400 text-sm leading-relaxed">
-          Developed an automated forecasting engine using Python. Created an ensemble model (Prophet for seasonality +
-          ARIMA for trend).
-          Built an interactive "What-If" scenario tool for supply chain managers.
+          Designed a Spark-based ETL pipeline using Databricks Jobs.
+          Enforced schema validation and automated quality checks at every layer of the Medallion architecture.
         </p>
       </div>
 
@@ -264,11 +264,10 @@
       </div>
 
       <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-        <h3 class="text-neutral-100 font-medium mb-3">Intended Models</h3>
+        <h3 class="text-neutral-100 font-medium mb-3">Governance & Quality</h3>
         <p class="text-neutral-400 text-sm leading-relaxed">
-          Planned forecasting approaches include baseline statistical models
-          (moving averages, ARIMA) and machine learning techniques, evaluated
-          using business-aligned error metrics such as MAE and MAPE.
+          Implemented Unity Catalog concepts for access control.
+          Data quality expectations (e.g., "price > 0") are enforced before promotion to the Silver layer.
         </p>
       </div>
 
@@ -282,19 +281,19 @@
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
           <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
-            <li>Databricks (Jobs, Notebooks, Workspace)</li>
-            <li>Python (pandas, PySpark-style transformations)</li>
-            <li>Medallion Architecture (Bronze, Silver, Gold)</li>
-            <li>Automated data pipelines</li>
+            <li>Databricks (Jobs, Delta Lake)</li>
+            <li>PySpark & Spark SQL</li>
+            <li>Medallion Architecture</li>
+            <li>Data Governance</li>
           </ul>
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
           <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
-            <li>Analytics-ready data modelling</li>
-            <li>Time series–friendly data aggregation</li>
-            <li>Forecasting-oriented data design</li>
-            <li>BI & dashboard consumption focus</li>
+            <li>ETL Optimization</li>
+            <li>Schema Enforcement</li>
+            <li>Data Warehousing</li>
+            <li>BI-Ready Modeling</li>
           </ul>
         </div>
       </div>
