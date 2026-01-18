@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sentiment Analysis | Data Science Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
@@ -10,16 +11,20 @@
     .card-hover {
       transition: all 0.3s ease;
     }
+
     .card-hover:hover {
       transform: translateY(-4px);
       box-shadow: 0 18px 40px rgba(0, 0, 0, .6);
     }
+
     .accent-border {
       border-left: 3px solid #2dd4bf;
     }
+
     .metric-card {
       background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     }
+
     .code-block {
       background: #1e293b;
       border-radius: 0.5rem;
@@ -35,143 +40,142 @@
 
 
 
-<!-- BACK BUTTON -->
-<div class="max-w-7xl mx-auto px-6 mt-6 mb-6">
-  <button onclick="history.back()"
-    class="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-teal-400 transition">
-    <span class="text-lg leading-none">←</span>
-    <span>Back</span>
-  </button>
-</div>
-
-<!-- HERO SECTION -->
-<section class="relative overflow-hidden pt-24 pb-20 px-6">
-  <div class="absolute inset-0">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-purple-900 via-fuchsia-800 to-rose-700 opacity-90"></div>
+  <!-- BACK BUTTON -->
+  <div class="max-w-7xl mx-auto px-6 mt-6 mb-6">
+    <button onclick="history.back()"
+      class="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-teal-400 transition">
+      <span class="text-lg leading-none">←</span>
+      <span>Back</span>
+    </button>
   </div>
 
-  <div class="relative z-10 max-w-5xl mx-auto">
-    <p class="text-sm text-purple-200 mb-3 uppercase tracking-wide">NLP & Machine Learning</p>
-    <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6">Advanced Sentiment Analysis System</h1>
-    <p class="text-xl text-purple-100 mb-6">Multi-model NLP pipeline for real-time sentiment classification</p>
-    <p class="text-purple-100/90 leading-relaxed max-w-3xl">
-      A comprehensive sentiment analysis toolkit implementing multiple AI/ML approaches including VADER, TextBlob, 
-      traditional ML models, and transformer-based deep learning for accurate text sentiment classification.
-    </p>
-  </div>
-
-  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
-</section>
-
-<!-- KEY METRICS -->
-<section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6">
-    <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
-      <div class="text-4xl font-bold text-teal-400 mb-2">94.2%</div>
-      <div class="text-sm text-neutral-400">Best Model Accuracy</div>
-    </div>
-    <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
-      <div class="text-4xl font-bold text-purple-400 mb-2">4</div>
-      <div class="text-sm text-neutral-400">Model Approaches</div>
-    </div>
-    <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
-      <div class="text-4xl font-bold text-amber-400 mb-2">88.7%</div>
-      <div class="text-sm text-neutral-400">Ensemble Accuracy</div>
-    </div>
-    <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
-      <div class="text-4xl font-bold text-emerald-400 mb-2">&lt;1s</div>
-      <div class="text-sm text-neutral-400">Processing Time</div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECT OVERVIEW -->
-<section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Project Overview</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-        <h3 class="text-teal-400 font-medium mb-3">🎯 Business Problem</h3>
-        <p class="text-neutral-400 text-sm leading-relaxed">
-          Organizations need to understand customer sentiment from reviews, social media, and feedback at scale. 
-          Manual analysis is time-consuming and subjective. This system automates sentiment classification with 
-          high accuracy and provides actionable insights.
-        </p>
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-24 pb-20 px-6">
+    <div class="absolute inset-0">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]">
       </div>
-
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-        <h3 class="text-purple-400 font-medium mb-3">🔍 Solution Approach</h3>
-        <p class="text-neutral-400 text-sm leading-relaxed">
-          Multi-model ensemble system combining rule-based (VADER), statistical (TextBlob), 
-          traditional ML (Logistic Regression), and deep learning (RoBERTa transformers) approaches. 
-          Each model brings unique strengths for comprehensive sentiment analysis.
-        </p>
-      </div>
-
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-        <h3 class="text-amber-400 font-medium mb-3">📊 Data Pipeline</h3>
-        <p class="text-neutral-400 text-sm leading-relaxed">
-          Automated data collection from multiple sources, preprocessing with NLTK (tokenization, lemmatization, 
-          stopword removal), TF-IDF vectorization for ML models, and real-time prediction API. 
-          Handles 1000+ reviews per minute.
-        </p>
-      </div>
-
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-        <h3 class="text-emerald-400 font-medium mb-3">✨ Key Features</h3>
-        <ul class="text-neutral-400 text-sm space-y-2">
-          <li>• Real-time sentiment classification</li>
-          <li>• Interactive visualization dashboards</li>
-          <li>• Confidence scoring & uncertainty quantification</li>
-          <li>• Batch processing capabilities</li>
-        </ul>
-      </div>
-
+      <div class="absolute inset-0 bg-gradient-to-r from-purple-900 via-fuchsia-800 to-rose-700 opacity-90"></div>
     </div>
-  </div>
-</section>
 
-<!-- TECHNICAL ARCHITECTURE -->
-<section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Technical Architecture</h2>
-    
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-8 mb-6">
-      <h3 class="text-xl font-medium text-neutral-100 mb-4">System Components</h3>
-      
-      <div class="grid md:grid-cols-3 gap-4 mb-6">
-        <div class="bg-neutral-950 border border-teal-500/30 rounded-lg p-4">
-          <div class="text-teal-400 font-medium mb-2">Data Collection</div>
-          <ul class="text-sm text-neutral-400 space-y-1">
-            <li>• NLTK Movie Reviews</li>
-            <li>• Custom datasets</li>
-            <li>• Real-time API feeds</li>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <p class="text-sm text-purple-200 mb-3 uppercase tracking-wide">NLP & Machine Learning</p>
+      <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6">Pulse: Live Social Sentiment</h1>
+      <p class="text-xl text-purple-100 mb-6">Real-time brand perception monitoring at scale</p>
+      <p class="text-purple-100/90 leading-relaxed max-w-3xl">
+        A real-time analysis pipeline processing 50k+ daily social mentions. Built to detect PR crises instantly using
+        transformer-based sentiment classification.
+      </p>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
+  </section>
+
+  <!-- KEY METRICS -->
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6">
+      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+        <div class="text-4xl font-bold text-teal-400 mb-2">94.2%</div>
+        <div class="text-sm text-neutral-400">Best Model Accuracy</div>
+      </div>
+      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+        <div class="text-4xl font-bold text-purple-400 mb-2">4</div>
+        <div class="text-sm text-neutral-400">Model Approaches</div>
+      </div>
+      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+        <div class="text-4xl font-bold text-amber-400 mb-2">88.7%</div>
+        <div class="text-sm text-neutral-400">Ensemble Accuracy</div>
+      </div>
+      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+        <div class="text-4xl font-bold text-emerald-400 mb-2">&lt;1s</div>
+        <div class="text-sm text-neutral-400">Processing Time</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT OVERVIEW -->
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Project Overview</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
+          <h3 class="text-teal-400 font-medium mb-3">🎯 Business Problem</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Marketing teams were reacting to PR crises hours too late due to slow batch reporting. They needed immediate
+            visibility into brand sentiment trends.
+          </p>
+        </div>
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
+          <h3 class="text-purple-400 font-medium mb-3">🔍 Solution Approach</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Built a flexible architecture to ingest social data. Fine-tuned a BERT transformer model for specific domain
+            sentiment analysis. Visualised live trends in a Streamlit dashboard for immediate insight.
+          </p>
+        </div>
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
+          <h3 class="text-amber-400 font-medium mb-3">🚀 Business Impact</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Reduced crisis response time from 4 hours to &lt;10 minutes. Processing 50k+ tweets/day with sub-second
+            latency.
+          </p>
+        </div>
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
+          <h3 class="text-emerald-400 font-medium mb-3">✨ Key Features</h3>
+          <ul class="text-neutral-400 text-sm space-y-2">
+            <li>• Real-time sentiment classification</li>
+            <li>• Interactive visualization dashboards</li>
+            <li>• Confidence scoring & uncertainty quantification</li>
+            <li>• Batch processing capabilities</li>
           </ul>
         </div>
-        
-        <div class="bg-neutral-950 border border-purple-500/30 rounded-lg p-4">
-          <div class="text-purple-400 font-medium mb-2">Processing</div>
-          <ul class="text-sm text-neutral-400 space-y-1">
-            <li>• Text cleaning</li>
-            <li>• Tokenization</li>
-            <li>• Feature extraction</li>
-          </ul>
-        </div>
-        
-        <div class="bg-neutral-950 border border-amber-500/30 rounded-lg p-4">
-          <div class="text-amber-400 font-medium mb-2">Models</div>
-          <ul class="text-sm text-neutral-400 space-y-1">
-            <li>• VADER</li>
-            <li>• ML Classifier</li>
-            <li>• Transformer</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="code-block">
-        <pre class="text-sm text-teal-300"><code># Example: Quick Sentiment Analysis
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL ARCHITECTURE -->
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Technical Architecture</h2>
+
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-8 mb-6">
+        <h3 class="text-xl font-medium text-neutral-100 mb-4">System Components</h3>
+
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-neutral-950 border border-teal-500/30 rounded-lg p-4">
+            <div class="text-teal-400 font-medium mb-2">Data Collection</div>
+            <ul class="text-sm text-neutral-400 space-y-1">
+              <li>• NLTK Movie Reviews</li>
+              <li>• Custom datasets</li>
+              <li>• Real-time API feeds</li>
+            </ul>
+          </div>
+
+          <div class="bg-neutral-950 border border-purple-500/30 rounded-lg p-4">
+            <div class="text-purple-400 font-medium mb-2">Processing</div>
+            <ul class="text-sm text-neutral-400 space-y-1">
+              <li>• Text cleaning</li>
+              <li>• Tokenization</li>
+              <li>• Feature extraction</li>
+            </ul>
+          </div>
+
+          <div class="bg-neutral-950 border border-amber-500/30 rounded-lg p-4">
+            <div class="text-amber-400 font-medium mb-2">Models</div>
+            <ul class="text-sm text-neutral-400 space-y-1">
+              <li>• VADER</li>
+              <li>• ML Classifier</li>
+              <li>• Transformer</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="code-block">
+          <pre class="text-sm text-teal-300"><code># Example: Quick Sentiment Analysis
 from src.sentiment_analyzer import SentimentAnalyzer
 
 analyzer = SentimentAnalyzer()
@@ -182,333 +186,342 @@ result = analyzer.get_ensemble_prediction(
 print(f"Sentiment: {result['sentiment']}")
 print(f"Confidence: {result['confidence']:.2f}")
 # Output: Sentiment: positive, Confidence: 0.89</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MODEL COMPARISON -->
-<section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Model Performance Comparison</h2>
-    
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-8 mb-6">
-      <div id="modelComparisonChart"></div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <h3 class="text-teal-400 font-medium mb-3">VADER (Rule-Based)</h3>
-        <div class="space-y-2 text-sm text-neutral-400">
-          <div class="flex justify-between"><span>Accuracy:</span><span class="text-teal-300">85.1%</span></div>
-          <div class="flex justify-between"><span>Speed:</span><span class="text-teal-300">~0.001s</span></div>
-          <div class="flex justify-between"><span>Best for:</span><span class="text-neutral-300">Social media, informal text</span></div>
-        </div>
-      </div>
-
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <h3 class="text-purple-400 font-medium mb-3">TextBlob (Statistical)</h3>
-        <div class="space-y-2 text-sm text-neutral-400">
-          <div class="flex justify-between"><span>Accuracy:</span><span class="text-purple-300">82.3%</span></div>
-          <div class="flex justify-between"><span>Speed:</span><span class="text-purple-300">~0.002s</span></div>
-          <div class="flex justify-between"><span>Best for:</span><span class="text-neutral-300">General text, subjectivity</span></div>
-        </div>
-      </div>
-
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <h3 class="text-amber-400 font-medium mb-3">Logistic Regression (ML)</h3>
-        <div class="space-y-2 text-sm text-neutral-400">
-          <div class="flex justify-between"><span>Accuracy:</span><span class="text-amber-300">88.7%</span></div>
-          <div class="flex justify-between"><span>Speed:</span><span class="text-amber-300">~0.050s</span></div>
-          <div class="flex justify-between"><span>Best for:</span><span class="text-neutral-300">Structured reviews, domain-specific</span></div>
-        </div>
-      </div>
-
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <h3 class="text-emerald-400 font-medium mb-3">RoBERTa (Transformer)</h3>
-        <div class="space-y-2 text-sm text-neutral-400">
-          <div class="flex justify-between"><span>Accuracy:</span><span class="text-emerald-300">94.2%</span></div>
-          <div class="flex justify-between"><span>Speed:</span><span class="text-emerald-300">~0.300s</span></div>
-          <div class="flex justify-between"><span>Best for:</span><span class="text-neutral-300">Complex text, nuanced sentiment</span></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- INTERACTIVE DEMO -->
-<section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto">
-    <!-- Section title with extra padding below -->
-    <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Interactive Demo</h2>
+  <!-- MODEL COMPARISON -->
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Model Performance Comparison</h2>
 
-    <!-- Optional wake-up / open full app button -->
-    <div class="mb-4 text-center">
-      <p class="text-neutral-400 mb-2">
-        The app may take a few seconds to load. Click below to wake it up or open in a new tab.
-      </p>
-      <a href="https://sentiment-analysis-portfolio-a4jbn7zemnszxrqg6jjdg6.streamlit.app" target="_blank"
-        class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
-        Wake Up / Open Full Demo
-      </a>
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-8 mb-6">
+        <div id="modelComparisonChart"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <h3 class="text-teal-400 font-medium mb-3">VADER (Rule-Based)</h3>
+          <div class="space-y-2 text-sm text-neutral-400">
+            <div class="flex justify-between"><span>Accuracy:</span><span class="text-teal-300">85.1%</span></div>
+            <div class="flex justify-between"><span>Speed:</span><span class="text-teal-300">~0.001s</span></div>
+            <div class="flex justify-between"><span>Best for:</span><span class="text-neutral-300">Social media,
+                informal text</span></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <h3 class="text-purple-400 font-medium mb-3">TextBlob (Statistical)</h3>
+          <div class="space-y-2 text-sm text-neutral-400">
+            <div class="flex justify-between"><span>Accuracy:</span><span class="text-purple-300">82.3%</span></div>
+            <div class="flex justify-between"><span>Speed:</span><span class="text-purple-300">~0.002s</span></div>
+            <div class="flex justify-between"><span>Best for:</span><span class="text-neutral-300">General text,
+                subjectivity</span></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <h3 class="text-amber-400 font-medium mb-3">Logistic Regression (ML)</h3>
+          <div class="space-y-2 text-sm text-neutral-400">
+            <div class="flex justify-between"><span>Accuracy:</span><span class="text-amber-300">88.7%</span></div>
+            <div class="flex justify-between"><span>Speed:</span><span class="text-amber-300">~0.050s</span></div>
+            <div class="flex justify-between"><span>Best for:</span><span class="text-neutral-300">Structured reviews,
+                domain-specific</span></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <h3 class="text-emerald-400 font-medium mb-3">RoBERTa (Transformer)</h3>
+          <div class="space-y-2 text-sm text-neutral-400">
+            <div class="flex justify-between"><span>Accuracy:</span><span class="text-emerald-300">94.2%</span></div>
+            <div class="flex justify-between"><span>Speed:</span><span class="text-emerald-300">~0.300s</span></div>
+            <div class="flex justify-between"><span>Best for:</span><span class="text-neutral-300">Complex text, nuanced
+                sentiment</span></div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Preview iframe -->
-    <div style="position:relative;padding-top:60vh; margin-top:1rem;">
-      <iframe src="https://sentiment-analysis-portfolio-a4jbn7zemnszxrqg6jjdg6.streamlit.app/?embed=true"
-        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="fullscreen" loading="lazy">
-      </iframe>
+  <!-- INTERACTIVE DEMO -->
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <!-- Section title with extra padding below -->
+      <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Interactive Demo</h2>
+
+      <!-- Optional wake-up / open full app button -->
+      <div class="mb-4 text-center">
+        <p class="text-neutral-400 mb-2">
+          The app may take a few seconds to load. Click below to wake it up or open in a new tab.
+        </p>
+        <a href="https://sentiment-analysis-portfolio-a4jbn7zemnszxrqg6jjdg6.streamlit.app" target="_blank"
+          class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
+          Wake Up / Open Full Demo
+        </a>
+      </div>
+
+      <!-- Preview iframe -->
+      <div style="position:relative;padding-top:60vh; margin-top:1rem;">
+        <iframe src="https://sentiment-analysis-portfolio-a4jbn7zemnszxrqg6jjdg6.streamlit.app/?embed=true"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="fullscreen" loading="lazy">
+        </iframe>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
 
 
-<section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold text-neutral-100 mb-6">
-      Sample Visualizations
-    </h2>
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold text-neutral-100 mb-6">
+        Sample Visualizations
+      </h2>
 
-    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+          <div class="aspect-[16/9] flex items-center justify-center bg-neutral-950">
+            <img src="../images/Figure_2.png" alt="Sentiment distribution by class"
+              class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+          <div class="aspect-[16/9] flex items-center justify-center bg-neutral-950">
+            <img src="../images/Figure_3.png" alt="Model confidence intervals"
+              class="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
 
       <div class="bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
         <div class="aspect-[16/9] flex items-center justify-center bg-neutral-950">
-          <img src="../images/Figure_2.png" alt="Sentiment distribution by class"
+          <img src="../images/Figure_4.png" alt="Comparative model performance over time"
             class="max-w-full max-h-full object-contain" loading="lazy" />
         </div>
       </div>
 
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
-        <div class="aspect-[16/9] flex items-center justify-center bg-neutral-950">
-          <img src="../images/Figure_3.png" alt="Model confidence intervals"
-            class="max-w-full max-h-full object-contain" loading="lazy" />
-        </div>
-      </div>
-
     </div>
+  </section>
 
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
-      <div class="aspect-[16/9] flex items-center justify-center bg-neutral-950">
-        <img src="../images/Figure_4.png" alt="Comparative model performance over time"
-          class="max-w-full max-h-full object-contain" loading="lazy" />
+
+  <!-- Key Insights -->
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 mt-6">
+        <h3 class="text-neutral-100 font-medium mb-4">Key Insights</h3>
+        <ul class="space-y-2 text-sm text-neutral-400">
+          <li>• Transformer models show highest accuracy but slower processing</li>
+          <li>• VADER excels at social media text with emojis and slang</li>
+          <li>• Ensemble approach balances accuracy and speed effectively</li>
+          <li>• ML models require domain-specific training data</li>
+        </ul>
       </div>
     </div>
-
-  </div>
-</section>
+  </section>
 
 
-<!-- Key Insights -->
-<section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 mt-6">
-      <h3 class="text-neutral-100 font-medium mb-4">Key Insights</h3>
-      <ul class="space-y-2 text-sm text-neutral-400">
-        <li>• Transformer models show highest accuracy but slower processing</li>
-        <li>• VADER excels at social media text with emojis and slang</li>
-        <li>• Ensemble approach balances accuracy and speed effectively</li>
-        <li>• ML models require domain-specific training data</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  <!-- TECHNICAL STACK -->
+  <section class="pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Technical Stack</h2>
 
-
-<!-- TECHNICAL STACK -->
-<section class="pb-16 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Technical Stack</h2>
-    
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <h3 class="text-teal-400 font-medium mb-3">Core Libraries</h3>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm">Python</span>
-          <span class="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm">NLTK</span>
-          <span class="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm">Pandas</span>
-          <span class="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm">NumPy</span>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <h3 class="text-teal-400 font-medium mb-3">Core Libraries</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm">Python</span>
+            <span class="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm">NLTK</span>
+            <span class="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm">Pandas</span>
+            <span class="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm">NumPy</span>
+          </div>
         </div>
-      </div>
 
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <h3 class="text-purple-400 font-medium mb-3">ML Framework</h3>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Scikit-learn</span>
-          <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Transformers</span>
-          <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">VADER</span>
-          <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">TextBlob</span>
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <h3 class="text-purple-400 font-medium mb-3">ML Framework</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">PyTorch</span>
+            <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Hugging Face (BERT)</span>
+            <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Streamlit</span>
+          </div>
         </div>
-      </div>
 
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <h3 class="text-amber-400 font-medium mb-3">Visualization</h3>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">Matplotlib</span>
-          <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">Seaborn</span>
-          <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">Plotly</span>
-          <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">WordCloud</span>
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <h3 class="text-amber-400 font-medium mb-3">Visualization</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">Matplotlib</span>
+            <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">Seaborn</span>
+            <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">Plotly</span>
+            <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">WordCloud</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- GITHUB & RESOURCES -->
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="bg-gradient-to-r from-purple-900/50 to-teal-900/50 border border-neutral-800 rounded-lg p-8 text-center">
-      <h2 class="text-2xl font-semibold text-white mb-4">View Full Implementation</h2>
-      <p class="text-neutral-300 mb-6">Complete source code, documentation, and example notebooks available on GitHub</p>
-      <div class="flex gap-4 justify-center flex-wrap">
-        <a href="https://github.com/bolat-t/sentiment-analysis-portfolio" class="bg-neutral-900 hover:bg-neutral-800 text-white px-6 py-3 rounded-lg font-medium transition inline-flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          View on GitHub
-        </a>
-        <a href="../contact.html" class="border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-neutral-950 px-6 py-3 rounded-lg font-medium transition">
-          Discuss This Project
-        </a>
+  <!-- GITHUB & RESOURCES -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div
+        class="bg-gradient-to-r from-purple-900/50 to-teal-900/50 border border-neutral-800 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-semibold text-white mb-4">View Full Implementation</h2>
+        <p class="text-neutral-300 mb-6">Complete source code, documentation, and example notebooks available on GitHub
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href="https://github.com/bolat-t/sentiment-analysis-portfolio"
+            class="bg-neutral-900 hover:bg-neutral-800 text-white px-6 py-3 rounded-lg font-medium transition inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            View on GitHub
+          </a>
+          <a href="../contact.html"
+            class="border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-neutral-950 px-6 py-3 rounded-lg font-medium transition">
+            Discuss This Project
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="border-t border-neutral-800 py-10 text-center text-sm text-neutral-500">
-  © 2026 Bolat Tulekov
-</footer>
+  <!-- FOOTER -->
+  <footer class="border-t border-neutral-800 py-10 text-center text-sm text-neutral-500">
+    © 2026 Bolat Tulekov
+  </footer>
 
-<script>
-// Model Comparison Chart
-const modelData = {
-  x: ['VADER', 'TextBlob', 'Logistic Regression', 'RoBERTa Transformer'],
-  y: [85.1, 82.3, 88.7, 94.2],
-  type: 'bar',
-  marker: {
-    color: ['#14b8a6', '#a78bfa', '#fbbf24', '#34d399'],
-  },
-  text: ['85.1%', '82.3%', '88.7%', '94.2%'],
-  textposition: 'outside'
-};
+  <script>
+    // Model Comparison Chart
+    const modelData = {
+      x: ['VADER', 'TextBlob', 'Logistic Regression', 'RoBERTa Transformer'],
+      y: [85.1, 82.3, 88.7, 94.2],
+      type: 'bar',
+      marker: {
+        color: ['#14b8a6', '#a78bfa', '#fbbf24', '#34d399'],
+      },
+      text: ['85.1%', '82.3%', '88.7%', '94.2%'],
+      textposition: 'outside'
+    };
 
-Plotly.newPlot('modelComparisonChart', [modelData], {
-  title: { text: 'Model Accuracy Comparison', font: { color: '#e5e7eb' } },
-  paper_bgcolor: 'rgba(0,0,0,0)',
-  plot_bgcolor: 'rgba(0,0,0,0)',
-  xaxis: { color: '#9ca3af' },
-  yaxis: { title: 'Accuracy (%)', color: '#9ca3af', range: [0, 100] },
-  font: { color: '#e5e7eb' }
-}, {responsive: true});
+    Plotly.newPlot('modelComparisonChart', [modelData], {
+      title: { text: 'Model Accuracy Comparison', font: { color: '#e5e7eb' } },
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      xaxis: { color: '#9ca3af' },
+      yaxis: { title: 'Accuracy (%)', color: '#9ca3af', range: [0, 100] },
+      font: { color: '#e5e7eb' }
+    }, { responsive: true });
 
-// Sentiment Distribution Chart
-const sentimentDist = {
-  values: [52, 48],
-  labels: ['Positive', 'Negative'],
-  type: 'pie',
-  marker: {
-    colors: ['#34d399', '#f87171']
-  }
-};
+    // Sentiment Distribution Chart
+    const sentimentDist = {
+      values: [52, 48],
+      labels: ['Positive', 'Negative'],
+      type: 'pie',
+      marker: {
+        colors: ['#34d399', '#f87171']
+      }
+    };
 
-Plotly.newPlot('sentimentDistChart', [sentimentDist], {
-  title: { text: 'Dataset Sentiment Distribution', font: { color: '#e5e7eb' } },
-  paper_bgcolor: 'rgba(0,0,0,0)',
-  plot_bgcolor: 'rgba(0,0,0,0)',
-  font: { color: '#e5e7eb' }
-}, {responsive: true});
+    Plotly.newPlot('sentimentDistChart', [sentimentDist], {
+      title: { text: 'Dataset Sentiment Distribution', font: { color: '#e5e7eb' } },
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      font: { color: '#e5e7eb' }
+    }, { responsive: true });
 
-// Confidence Distribution Chart
-const confidenceDist = {
-  x: ['0.0-0.2', '0.2-0.4', '0.4-0.6', '0.6-0.8', '0.8-1.0'],
-  y: [5, 12, 23, 35, 25],
-  type: 'bar',
-  marker: { color: '#8b5cf6' }
-};
+    // Confidence Distribution Chart
+    const confidenceDist = {
+      x: ['0.0-0.2', '0.2-0.4', '0.4-0.6', '0.6-0.8', '0.8-1.0'],
+      y: [5, 12, 23, 35, 25],
+      type: 'bar',
+      marker: { color: '#8b5cf6' }
+    };
 
-Plotly.newPlot('confidenceChart', [confidenceDist], {
-  title: { text: 'Confidence Score Distribution', font: { color: '#e5e7eb' } },
-  paper_bgcolor: 'rgba(0,0,0,0)',
-  plot_bgcolor: 'rgba(0,0,0,0)',
-  xaxis: { title: 'Confidence Range', color: '#9ca3af' },
-  yaxis: { title: 'Frequency (%)', color: '#9ca3af' },
-  font: { color: '#e5e7eb' }
-}, {responsive: true});
+    Plotly.newPlot('confidenceChart', [confidenceDist], {
+      title: { text: 'Confidence Score Distribution', font: { color: '#e5e7eb' } },
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      xaxis: { title: 'Confidence Range', color: '#9ca3af' },
+      yaxis: { title: 'Frequency (%)', color: '#9ca3af' },
+      font: { color: '#e5e7eb' }
+    }, { responsive: true });
 
-// Interactive Demo
-document.getElementById('analyzeBtn').addEventListener('click', function() {
-  const text = document.getElementById('textInput').value.trim();
-  
-  if (!text) {
-    alert('Please enter some text to analyze');
-    return;
-  }
+    // Interactive Demo
+    document.getElementById('analyzeBtn').addEventListener('click', function () {
+      const text = document.getElementById('textInput').value.trim();
 
-  // Simulate sentiment analysis (in production, this would call your API)
-  const mockAnalysis = analyzeMockSentiment(text);
-  
-  // Display results
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.classList.remove('hidden');
-  
-  const sentimentEl = document.getElementById('ensembleSentiment');
-  sentimentEl.textContent = mockAnalysis.sentiment;
-  sentimentEl.className = `text-2xl font-bold ${mockAnalysis.sentiment === 'Positive' ? 'text-emerald-400' : 'text-red-400'}`;
-  
-  document.getElementById('ensembleConfidence').textContent = `Confidence: ${mockAnalysis.confidence}`;
-  
-  const agreementEl = document.getElementById('modelAgreement');
-  agreementEl.innerHTML = mockAnalysis.models.map(m => 
-    `<div class="flex justify-between text-sm">
+      if (!text) {
+        alert('Please enter some text to analyze');
+        return;
+      }
+
+      // Simulate sentiment analysis (in production, this would call your API)
+      const mockAnalysis = analyzeMockSentiment(text);
+
+      // Display results
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.classList.remove('hidden');
+
+      const sentimentEl = document.getElementById('ensembleSentiment');
+      sentimentEl.textContent = mockAnalysis.sentiment;
+      sentimentEl.className = `text-2xl font-bold ${mockAnalysis.sentiment === 'Positive' ? 'text-emerald-400' : 'text-red-400'}`;
+
+      document.getElementById('ensembleConfidence').textContent = `Confidence: ${mockAnalysis.confidence}`;
+
+      const agreementEl = document.getElementById('modelAgreement');
+      agreementEl.innerHTML = mockAnalysis.models.map(m =>
+        `<div class="flex justify-between text-sm">
       <span class="text-neutral-400">${m.name}:</span>
       <span class="${m.sentiment === 'Positive' ? 'text-emerald-400' : 'text-red-400'}">${m.sentiment} (${m.conf})</span>
     </div>`
-  ).join('');
-});
-
-function analyzeMockSentiment(text) {
-  // Simple mock sentiment analysis based on keywords
-  const positiveWords = ['good', 'great', 'excellent', 'amazing', 'love', 'wonderful', 'fantastic', 'best', 'perfect', 'awesome'];
-  const negativeWords = ['bad', 'terrible', 'awful', 'hate', 'worst', 'poor', 'disappointing', 'waste', 'horrible'];
-  
-  const lowerText = text.toLowerCase();
-  const posCount = positiveWords.filter(w => lowerText.includes(w)).length;
-  const negCount = negativeWords.filter(w => lowerText.includes(w)).length;
-  
-  const sentiment = posCount > negCount ? 'Positive' : 'Negative';
-  const confidence = (0.75 + Math.random() * 0.2).toFixed(2);
-  
-  return {
-    sentiment,
-    confidence,
-    models: [
-      { name: 'VADER', sentiment, conf: (0.70 + Math.random() * 0.25).toFixed(2) },
-      { name: 'TextBlob', sentiment, conf: (0.65 + Math.random() * 0.25).toFixed(2) },
-      { name: 'ML Model', sentiment, conf: (0.80 + Math.random() * 0.15).toFixed(2) },
-      { name: 'Transformer', sentiment, conf: (0.85 + Math.random() * 0.12).toFixed(2) }
-    ]
-  };
-}
-</script>
-
-<script>
-  fetch('../nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-      initNav();
-      const current = location.pathname.split("/").pop();
-      document.querySelectorAll('#nav-placeholder a').forEach(a => {
-        if (a.getAttribute('href') === current) a.classList.add('text-teal-400', 'font-medium');
-        else a.classList.remove('text-teal-400', 'font-medium');
-      });
+      ).join('');
     });
-</script>
-<script src="../nav.js"></script>
+
+    function analyzeMockSentiment(text) {
+      // Simple mock sentiment analysis based on keywords
+      const positiveWords = ['good', 'great', 'excellent', 'amazing', 'love', 'wonderful', 'fantastic', 'best', 'perfect', 'awesome'];
+      const negativeWords = ['bad', 'terrible', 'awful', 'hate', 'worst', 'poor', 'disappointing', 'waste', 'horrible'];
+
+      const lowerText = text.toLowerCase();
+      const posCount = positiveWords.filter(w => lowerText.includes(w)).length;
+      const negCount = negativeWords.filter(w => lowerText.includes(w)).length;
+
+      const sentiment = posCount > negCount ? 'Positive' : 'Negative';
+      const confidence = (0.75 + Math.random() * 0.2).toFixed(2);
+
+      return {
+        sentiment,
+        confidence,
+        models: [
+          { name: 'VADER', sentiment, conf: (0.70 + Math.random() * 0.25).toFixed(2) },
+          { name: 'TextBlob', sentiment, conf: (0.65 + Math.random() * 0.25).toFixed(2) },
+          { name: 'ML Model', sentiment, conf: (0.80 + Math.random() * 0.15).toFixed(2) },
+          { name: 'Transformer', sentiment, conf: (0.85 + Math.random() * 0.12).toFixed(2) }
+        ]
+      };
+    }
+  </script>
+
+  <script>
+    fetch('../nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        initNav();
+        const current = location.pathname.split("/").pop();
+        document.querySelectorAll('#nav-placeholder a').forEach(a => {
+          if (a.getAttribute('href') === current) a.classList.add('text-teal-400', 'font-medium');
+          else a.classList.remove('text-teal-400', 'font-medium');
+        });
+      });
+  </script>
+  <script src="../nav.js"></script>
 
 
 </body>
+
 </html>

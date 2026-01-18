@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sales Forecasting | Data Science Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
@@ -10,16 +11,20 @@
     .card-hover {
       transition: all 0.3s ease;
     }
+
     .card-hover:hover {
       transform: translateY(-4px);
       box-shadow: 0 18px 40px rgba(0, 0, 0, .6);
     }
+
     .accent-border {
       border-left: 3px solid #2dd4bf;
     }
+
     .metric-card {
       background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     }
+
     .code-block {
       background: #1e293b;
       border-radius: 0.5rem;
@@ -37,333 +42,330 @@
 
 
 
-<!-- BACK BUTTON -->
-<div class="max-w-7xl mx-auto px-6 mt-6 mb-6">
-  <button onclick="history.back()"
-    class="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-teal-400 transition">
-    <span class="text-lg leading-none">←</span>
-    <span>Back</span>
-  </button>
-</div>
+  <!-- BACK BUTTON -->
+  <div class="max-w-7xl mx-auto px-6 mt-6 mb-6">
+    <button onclick="history.back()"
+      class="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-teal-400 transition">
+      <span class="text-lg leading-none">←</span>
+      <span>Back</span>
+    </button>
+  </div>
 
-<!-- AWS-STYLE GRADIENT HERO -->
-<section class="relative overflow-hidden pt-24 pb-20 px-6">
+  <!-- AWS-STYLE GRADIENT HERO -->
+  <section class="relative overflow-hidden pt-24 pb-20 px-6">
 
-  <!-- Background -->
-  <div class="absolute inset-0">
-    <!-- Radial layers -->
-    <div
-      class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]">
+    <!-- Background -->
+    <div class="absolute inset-0">
+      <!-- Radial layers -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]">
+      </div>
+
+      <!-- Base gradient -->
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-sky-800 to-indigo-700 opacity-90"></div>
     </div>
 
-    <!-- Base gradient -->
-    <div class="absolute inset-0 bg-gradient-to-r from-purple-900 via-fuchsia-800 to-rose-700 opacity-90"></div>
-  </div>
-
-  <!-- Content -->
-  <div class="relative z-10 max-w-5xl mx-auto">
-    <p class="text-sm text-purple-200 mb-3 uppercase tracking-wide">
-      Forecasting & BI
-    </p>
-
-    <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6">
-      Sales Forecasting
-    </h1>
-
-    <p class="text-xl text-purple-100 mb-6">
-      Time series forecasting to support planning, inventory optimisation,
-      and executive decision-making.
-    </p>
-
-    <p class="text-purple-100/90 leading-relaxed max-w-3xl">
-      This project focuses on demand forecasting across multiple horizons,
-      leveraging classical time series models and machine learning approaches
-      to improve business planning accuracy.
-    </p>
-  </div>
-
-  <!-- Fade into page -->
-  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
-</section>
-
-
-<section class="pt-16 pb-16 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 accent-border">
-      <p class="text-teal-400 font-medium mb-2 uppercase tracking-wide text-xs">
-        Databricks Platform
+    <!-- Content -->
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <p class="text-sm text-purple-200 mb-3 uppercase tracking-wide">
+        Forecasting & BI
       </p>
 
+      <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6">
+        DemandAI: Sales Forecasting
+      </h1>
 
-      <p class="text-neutral-400 leading-relaxed">
-      This project implements a production-style data platform that enables
-      reliable sales forecasting by transforming raw transactional data into
-      analytics-ready time series datasets. Built on Databricks using a
-      medallion architecture (Bronze, Silver, Gold), the platform emphasises
-      data quality, repeatable pipelines, and downstream forecasting readiness.
-    </p>
+      <p class="text-xl text-purple-100 mb-6">
+        Time series forecasting to support planning, inventory optimisation,
+        and executive decision-making.
+      </p>
 
-    </div>
-  </div>
-</section>
-
-
-<!-- KEY OBJECTIVES -->
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-      <h3 class="text-neutral-100 font-medium mb-3">Business Objective</h3>
-      <p class="text-neutral-400 text-sm leading-relaxed">
-        Enable reliable sales forecasting and reporting by creating a clean,
-        well-structured data foundation that reduces noise from raw operational systems
-        and aligns metrics with business definitions.
+      <p class="text-purple-100/90 leading-relaxed max-w-3xl">
+        Optimising inventory levels with Prophet & ARIMA ensemble models. An automated forecasting engine balancing
+        seasonality and trend for supply chain efficiency.
       </p>
     </div>
 
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-      <h3 class="text-neutral-100 font-medium mb-3">Technical Objective</h3>
-      <p class="text-neutral-400 text-sm leading-relaxed">
-        Design an end-to-end data pipeline that demonstrates best practices in
-        data ingestion, transformation, validation, and modelling using layered
-        data architecture.
-      </p>
+    <!-- Fade into page -->
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
+  </section>
+
+
+  <section class="pt-16 pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 accent-border">
+        <p class="text-teal-400 font-medium mb-2 uppercase tracking-wide text-xs">
+          Supply Chain Optimisation
+        </p>
+
+
+        <p class="text-neutral-400 leading-relaxed">
+          A solution addressing overstocking and stockouts which were costing the business 12% in potential margin.
+          Moving from brittle Excel sheets to an automated Python-based forecasting engine.
+        </p>
+
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
 
-<!-- MEDALLION ARCHITECTURE -->
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-8">Medallion Architecture</h2>
+  <!-- KEY OBJECTIVES -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
 
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <!-- BRONZE -->
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <p class="text-sm text-amber-400 mb-2 uppercase">Bronze Layer</p>
-        <h3 class="font-medium mb-3">Raw Ingestion</h3>
-        <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
-          <li>Ingest raw sales order data with minimal transformation</li>
-          <li>Preserve original schema and values</li>
-          <li>Add ingestion timestamps for auditability</li>
-          <li>Designed for traceability and replay</li>
-        </ul>
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+        <h3 class="text-neutral-100 font-medium mb-3">Business Objective</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Overstocking and stockouts were costing the business 12% in potential margin.
+          Excel-based forecasts were brittle, manual, and unable to scale with SKU growth.
+        </p>
       </div>
 
-      <!-- SILVER -->
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <p class="text-sm text-slate-300 mb-2 uppercase">Silver Layer</p>
-        <h3 class="font-medium mb-3">Cleansed & Standardised</h3>
-        <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
-          <li>Data type standardisation and validation</li>
-          <li>Removal of duplicates and invalid records</li>
-          <li>Business rule enforcement</li>
-          <li>Prepared for analytical consumption</li>
-        </ul>
-      </div>
-
-      <!-- GOLD -->
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <p class="text-sm text-yellow-400 mb-2 uppercase">Gold Layer</p>
-        <h3 class="font-medium mb-3">Business Models</h3>
-        <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
-          <li>Aggregated sales and revenue metrics</li>
-          <li>Analytics-ready fact tables</li>
-          <li>Forecast-friendly time series structure</li>
-          <li>Validated outputs for BI dashboards</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- DATABRICKS JOB PIPELINE -->
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-8">Databricks Job Pipeline</h2>
-
-<div class="grid md:grid-cols-2 gap-6 items-stretch">
-
-  <!-- LEFT CARD -->
-  <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 flex flex-col">
-    <p class="text-neutral-400 text-sm leading-relaxed mb-4">
-      The pipeline is orchestrated using Databricks Jobs, with each medallion
-      layer executed as a discrete, dependency-driven task. This approach
-      ensures reliability, observability, and repeatability while enabling
-      easy scheduling and monitoring.
-    </p>
-
-    <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside mt-auto">
-      <li>Automated execution of Bronze → Silver → Gold layers</li>
-      <li>Task dependencies enforce data quality gates</li>
-      <li>Idempotent transformations for safe re-runs</li>
-      <li>Designed for scheduled and event-driven execution</li>
-    </ul>
-  </div>
-
-  <!-- RIGHT CARD (MATCHED HEIGHT) -->
-  <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 flex items-center">
-    <p class="text-neutral-400 text-sm leading-relaxed">
-      Each task in the Databricks Job represents a logical stage in the data
-      lifecycle, allowing failures to be isolated, monitored, and rerun
-      independently without impacting downstream consumers.
-    </p>
-  </div>
-
-</div>
-
-  </div>
-</section>
-
-<!-- DATABRICKS PIPELINE DIAGRAM -->
-<section class="pb-24 px-6">
-  <div class="max-w-6xl mx-auto">
-
-    <h3 class="text-xl font-semibold mb-6">
-      Databricks Job Pipeline Architecture
-    </h3>
-
-    <div class="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden shadow-lg">
-
-      <!-- IMAGE -->
-      <div class="relative aspect-[16/9] md:aspect-[21/9] bg-neutral-800">
-        <img
-          src="../images/Pipeline.png."
-          alt="Databricks Job Pipeline Architecture"
-          class="absolute inset-0 w-full h-full object-contain p-4 md:p-8"
-        />
-      </div>
-
-      <!-- CAPTION -->
-      <div class="border-t border-neutral-800 px-6 py-4">
-        <p class="text-neutral-400 text-sm leading-relaxed max-w-5xl">
-          The diagram illustrates the orchestration of Bronze, Silver, and Gold
-          data processing tasks using Databricks Jobs. Each stage is
-          dependency-aware, ensuring data quality, traceability, and repeatable
-          execution across pipeline runs.
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+        <h3 class="text-neutral-100 font-medium mb-3">Technical Objective</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Developed an automated forecasting engine using Python. Created an ensemble model (Prophet for seasonality +
+          ARIMA for trend).
+          Built an interactive "What-If" scenario tool for supply chain managers.
         </p>
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- MEDALLION ARCHITECTURE -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-8">Medallion Architecture</h2>
 
-<!-- FORECASTING READINESS -->
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-3 gap-6">
 
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-      <h3 class="text-neutral-100 font-medium mb-3">Forecasting Readiness</h3>
+        <!-- BRONZE -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <p class="text-sm text-amber-400 mb-2 uppercase">Bronze Layer</p>
+          <h3 class="font-medium mb-3">Raw Ingestion</h3>
+          <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
+            <li>Ingest raw sales order data with minimal transformation</li>
+            <li>Preserve original schema and values</li>
+            <li>Add ingestion timestamps for auditability</li>
+            <li>Designed for traceability and replay</li>
+          </ul>
+        </div>
+
+        <!-- SILVER -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <p class="text-sm text-slate-300 mb-2 uppercase">Silver Layer</p>
+          <h3 class="font-medium mb-3">Cleansed & Standardised</h3>
+          <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
+            <li>Data type standardisation and validation</li>
+            <li>Removal of duplicates and invalid records</li>
+            <li>Business rule enforcement</li>
+            <li>Prepared for analytical consumption</li>
+          </ul>
+        </div>
+
+        <!-- GOLD -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <p class="text-sm text-yellow-400 mb-2 uppercase">Gold Layer</p>
+          <h3 class="font-medium mb-3">Business Models</h3>
+          <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
+            <li>Aggregated sales and revenue metrics</li>
+            <li>Analytics-ready fact tables</li>
+            <li>Forecast-friendly time series structure</li>
+            <li>Validated outputs for BI dashboards</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DATABRICKS JOB PIPELINE -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-8">Databricks Job Pipeline</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 items-stretch">
+
+        <!-- LEFT CARD -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 flex flex-col">
+          <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+            The pipeline is orchestrated using Databricks Jobs, with each medallion
+            layer executed as a discrete, dependency-driven task. This approach
+            ensures reliability, observability, and repeatability while enabling
+            easy scheduling and monitoring.
+          </p>
+
+          <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside mt-auto">
+            <li>Automated execution of Bronze → Silver → Gold layers</li>
+            <li>Task dependencies enforce data quality gates</li>
+            <li>Idempotent transformations for safe re-runs</li>
+            <li>Designed for scheduled and event-driven execution</li>
+          </ul>
+        </div>
+
+        <!-- RIGHT CARD (MATCHED HEIGHT) -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 flex items-center">
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Each task in the Databricks Job represents a logical stage in the data
+            lifecycle, allowing failures to be isolated, monitored, and rerun
+            independently without impacting downstream consumers.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DATABRICKS PIPELINE DIAGRAM -->
+  <section class="pb-24 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <h3 class="text-xl font-semibold mb-6">
+        Databricks Job Pipeline Architecture
+      </h3>
+
+      <div class="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden shadow-lg">
+
+        <!-- IMAGE -->
+        <div class="relative aspect-[16/9] md:aspect-[21/9] bg-neutral-800">
+          <img src="../images/Pipeline.png." alt="Databricks Job Pipeline Architecture"
+            class="absolute inset-0 w-full h-full object-contain p-4 md:p-8" />
+        </div>
+
+        <!-- CAPTION -->
+        <div class="border-t border-neutral-800 px-6 py-4">
+          <p class="text-neutral-400 text-sm leading-relaxed max-w-5xl">
+            The diagram illustrates the orchestration of Bronze, Silver, and Gold
+            data processing tasks using Databricks Jobs. Each stage is
+            dependency-aware, ensuring data quality, traceability, and repeatable
+            execution across pipeline runs.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FORECASTING READINESS -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+        <h3 class="text-neutral-100 font-medium mb-3">Forecasting Readiness</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          The Gold layer is structured to support time series forecasting by
+          aggregating sales at consistent time intervals, enabling the application
+          of classical forecasting models and machine learning approaches with minimal
+          additional preparation.
+        </p>
+      </div>
+
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+        <h3 class="text-neutral-100 font-medium mb-3">Intended Models</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Planned forecasting approaches include baseline statistical models
+          (moving averages, ARIMA) and machine learning techniques, evaluated
+          using business-aligned error metrics such as MAE and MAPE.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-8">Tools & Technologies</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
+            <li>Databricks (Jobs, Notebooks, Workspace)</li>
+            <li>Python (pandas, PySpark-style transformations)</li>
+            <li>Medallion Architecture (Bronze, Silver, Gold)</li>
+            <li>Automated data pipelines</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+          <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
+            <li>Analytics-ready data modelling</li>
+            <li>Time series–friendly data aggregation</li>
+            <li>Forecasting-oriented data design</li>
+            <li>BI & dashboard consumption focus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- OUTCOMES -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+      <h3 class="font-medium mb-3">Outcome & Value</h3>
       <p class="text-neutral-400 text-sm leading-relaxed">
-        The Gold layer is structured to support time series forecasting by
-        aggregating sales at consistent time intervals, enabling the application
-        of classical forecasting models and machine learning approaches with minimal
-        additional preparation.
+        This project demonstrates the ability to design and implement a scalable
+        data foundation that bridges raw operational data and advanced analytics.
+        It highlights practical data engineering skills while directly supporting
+        sales forecasting and executive-level reporting use cases.
       </p>
     </div>
+  </section>
 
-    <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
-      <h3 class="text-neutral-100 font-medium mb-3">Intended Models</h3>
+  <!-- WHY THIS PROJECT MATTERS -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+      <h3 class="font-medium mb-3">Why This Project Matters</h3>
       <p class="text-neutral-400 text-sm leading-relaxed">
-        Planned forecasting approaches include baseline statistical models
-        (moving averages, ARIMA) and machine learning techniques, evaluated
-        using business-aligned error metrics such as MAE and MAPE.
+        Rather than focusing solely on forecasting models, this project demonstrates
+        how reliable predictions depend on robust data foundations. By combining
+        Databricks job orchestration with a layered data architecture, the solution
+        mirrors real-world enterprise data platforms used to support forecasting,
+        planning, and strategic decision-making.
       </p>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-8">Tools & Technologies</h2>
-
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
-          <li>Databricks (Jobs, Notebooks, Workspace)</li>
-          <li>Python (pandas, PySpark-style transformations)</li>
-          <li>Medallion Architecture (Bronze, Silver, Gold)</li>
-          <li>Automated data pipelines</li>
-        </ul>
-      </div>
-
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-        <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
-          <li>Analytics-ready data modelling</li>
-          <li>Time series–friendly data aggregation</li>
-          <li>Forecasting-oriented data design</li>
-          <li>BI & dashboard consumption focus</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- OUTCOMES -->
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-    <h3 class="font-medium mb-3">Outcome & Value</h3>
-    <p class="text-neutral-400 text-sm leading-relaxed">
-      This project demonstrates the ability to design and implement a scalable
-      data foundation that bridges raw operational data and advanced analytics.
-      It highlights practical data engineering skills while directly supporting
-      sales forecasting and executive-level reporting use cases.
-    </p>
-  </div>
-</section>
-
-<!-- WHY THIS PROJECT MATTERS -->
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-    <h3 class="font-medium mb-3">Why This Project Matters</h3>
-    <p class="text-neutral-400 text-sm leading-relaxed">
-      Rather than focusing solely on forecasting models, this project demonstrates
-      how reliable predictions depend on robust data foundations. By combining
-      Databricks job orchestration with a layered data architecture, the solution
-      mirrors real-world enterprise data platforms used to support forecasting,
-      planning, and strategic decision-making.
-    </p>
-  </div>
-</section>
-
-<!-- GITHUB & RESOURCES -->
-<section class="pb-24 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="bg-gradient-to-r from-purple-900/50 to-teal-900/50 border border-neutral-800 rounded-lg p-8 text-center">
-      <h2 class="text-2xl font-semibold text-white mb-4">View Full Implementation</h2>
-      <p class="text-neutral-300 mb-6">Complete source code, documentation, and example notebooks available on GitHub</p>
-      <div class="flex gap-4 justify-center flex-wrap">
-        <a href="https://github.com/bolat-t/Databricks-Sales" class="bg-neutral-900 hover:bg-neutral-800 text-white px-6 py-3 rounded-lg font-medium transition inline-flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          View on GitHub
-        </a>
-        <a href="../contact.html" class="border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-neutral-950 px-6 py-3 rounded-lg font-medium transition">
-          Discuss This Project
-        </a>
+  <!-- GITHUB & RESOURCES -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div
+        class="bg-gradient-to-r from-purple-900/50 to-teal-900/50 border border-neutral-800 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-semibold text-white mb-4">View Full Implementation</h2>
+        <p class="text-neutral-300 mb-6">Complete source code, documentation, and example notebooks available on GitHub
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href="https://github.com/bolat-t/Databricks-Sales"
+            class="bg-neutral-900 hover:bg-neutral-800 text-white px-6 py-3 rounded-lg font-medium transition inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            View on GitHub
+          </a>
+          <a href="../contact.html"
+            class="border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-neutral-950 px-6 py-3 rounded-lg font-medium transition">
+            Discuss This Project
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  fetch('../nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-      initNav();
-      const current = location.pathname.split("/").pop();
-      document.querySelectorAll('#nav-placeholder a').forEach(a => {
-        if (a.getAttribute('href') === current) a.classList.add('text-teal-400', 'font-medium');
-        else a.classList.remove('text-teal-400', 'font-medium');
+  <script>
+    fetch('../nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        initNav();
+        const current = location.pathname.split("/").pop();
+        document.querySelectorAll('#nav-placeholder a').forEach(a => {
+          if (a.getAttribute('href') === current) a.classList.add('text-teal-400', 'font-medium');
+          else a.classList.remove('text-teal-400', 'font-medium');
+        });
       });
-    });
-</script>
-<script src="../nav.js"></script>
+  </script>
+  <script src="../nav.js"></script>

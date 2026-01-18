@@ -1,0 +1,490 @@
+# Data Science Portfolio - Brand Guidelines
+
+## Brand Overview
+
+### Brand Identity
+**Name:** Bolat Tulekov - Data Science Portfolio  
+**Tagline:** Data Science · Machine Learning · Business Intelligence  
+**Positioning:** Professional, technical, modern, and insight-driven
+
+---
+
+## Visual Identity
+
+### Logo & Branding Mark
+
+**Primary Mark:**
+- Square badge with initials "DS"
+- Background: `#262626` (neutral-800)
+- Text colour: `#2dd4bf` (teal-400)
+- Border radius: `0.375rem` (6px)
+- Dimensions: 36px × 36px
+
+**Logo Lockup:**
+```
+[DS Badge] Data Science Portfolio
+```
+
+**Clear Space:** Maintain minimum 8px padding around logo mark
+
+---
+
+## Colour Palette
+
+### Primary Colours
+
+**Teal (Primary Accent)**
+- Hex: `#2dd4bf`
+- RGB: `rgb(45, 212, 191)`
+- Usage: Primary CTAs, links, highlights, active states
+- Tailwind: `teal-400`
+
+**Deep Indigo (Background Base)**
+- Hex: `#1e1b4b`
+- RGB: `rgb(30, 27, 75)`
+- Usage: Hero backgrounds, gradient bases
+- Tailwind: `indigo-950`
+
+### Secondary Colours
+
+**Purple**
+- Hex: `#a78bfa`
+- RGB: `rgb(167, 139, 250)`
+- Usage: Machine learning projects, secondary accents
+- Tailwind: `purple-400`
+
+**Amber**
+- Hex: `#fbbf24`
+- RGB: `rgb(251, 191, 36)`
+- Usage: BI & visualisation projects, warm accents
+- Tailwind: `amber-400`
+
+**Emerald**
+- Hex: `#34d399`
+- RGB: `rgb(52, 211, 153)`
+- Usage: Data platforms, success states
+- Tailwind: `emerald-400`
+
+**Indigo**
+- Hex: `#818cf8`
+- RGB: `rgb(129, 140, 248)`
+- Usage: Personal projects, alternative accent
+- Tailwind: `indigo-400`
+
+**Sky Blue**
+- Hex: `#38bdf8`
+- RGB: `rgb(56, 189, 248)`
+- Usage: Gradient overlays, subtle accents
+- Tailwind: `sky-400`
+
+**Rose/Pink**
+- Hex: `#f472b6`
+- RGB: `rgb(244, 114, 182)`
+- Usage: Gradient overlays, creative accents
+- Tailwind: `pink-400`
+
+### Neutral Palette
+
+**Background Colours:**
+- `neutral-950` (#0a0a0a) - Primary background
+- `neutral-900` (#171717) - Card backgrounds
+- `neutral-800` (#262626) - Elevated surfaces
+
+**Border Colours:**
+- `neutral-800` (#262626) - Primary borders
+- `neutral-700` (#404040) - Hover states
+
+**Text Colours:**
+- `neutral-100` (#f5f5f5) - Headings
+- `neutral-200` (#e5e5e5) - Body text
+- `neutral-300` (#d4d4d4) - Secondary text
+- `neutral-400` (#a3a3a3) - Muted text
+- `neutral-500` (#737373) - Disabled/subtle text
+
+---
+
+## Typography
+
+### Font System
+**Primary Font:** System font stack (native UI fonts)
+```css
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+             "Helvetica Neue", Arial, sans-serif
+```
+
+### Type Scale
+
+**Headings:**
+- H1: `text-4xl md:text-5xl` (36-48px) · `font-semibold`
+- H2: `text-3xl` (30px) · `font-semibold`
+- H3: `text-2xl` (24px) · `font-semibold`
+- H4: `text-xl` (20px) · `font-medium`
+
+**Body Text:**
+- Large: `text-xl` (20px) · `leading-relaxed`
+- Default: `text-base` (16px) · `leading-relaxed`
+- Small: `text-sm` (14px) · `leading-relaxed`
+- Extra Small: `text-xs` (12px)
+
+**Font Weights:**
+- Bold: `font-bold` (700)
+- Semibold: `font-semibold` (600)
+- Medium: `font-medium` (500)
+- Regular: default (400)
+
+### Responsive Typography
+```css
+html {
+  font-size: clamp(15px, 1vw + 0.5rem, 18px);
+}
+```
+Fluid scaling between 15px (mobile) and 18px (desktop)
+
+---
+
+## Spacing System
+
+### Consistent Spacing Scale
+- `px-6` / `py-6` - Standard section padding
+- `gap-6` - Default grid gaps
+- `mb-6` - Default bottom margins
+- `pt-24` / `pb-24` - Large section padding
+- `mt-[80px]` / `pt-[80px]` - Fixed nav offset
+
+### Container Widths
+- `max-w-7xl` - Primary content container (1280px)
+- `max-w-6xl` - Secondary container (1152px)
+- `max-w-5xl` - Narrow content (1024px)
+- `max-w-3xl` - Text content (768px)
+
+---
+
+## UI Components
+
+### Buttons
+
+**Primary Button:**
+```css
+bg-teal-500 text-neutral-900 px-8 py-3 rounded-md
+hover:bg-teal-400 transition
+```
+
+**Secondary Button:**
+```css
+border border-neutral-700 text-neutral-300 px-8 py-3 rounded-md
+hover:border-neutral-500 transition
+```
+
+**Outline Button:**
+```css
+border-2 border-teal-400 text-teal-400 px-6 py-3 rounded-lg
+hover:bg-teal-400 hover:text-neutral-950 transition
+```
+
+**Gradient Button (Hover Effect):**
+```css
+.btn-gradient {
+  position: relative;
+  overflow: hidden;
+}
+.btn-gradient::before {
+  background: linear-gradient(120deg,
+    rgba(124, 58, 237, 0.6),
+    rgba(236, 72, 153, 0.6),
+    rgba(234, 179, 8, 0.6));
+  opacity: 0 → 0.35 on hover;
+}
+```
+
+### Cards
+
+**Standard Card:**
+```css
+bg-neutral-900 border border-neutral-800 rounded-lg p-6
+```
+
+**Hover Effect:**
+```css
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+```
+
+**Accent Border:**
+```css
+border-left: 3px solid var(--accent-teal);
+```
+
+### Project Category Colours
+- ML & AI: Teal (`#2dd4bf`)
+- BI & Visualisation: Amber (`#fbbf24`)
+- Data Platforms: Emerald (`#34d399`)
+- Personal: Indigo (`#818cf8`)
+
+---
+
+## Background Patterns
+
+### Hero Background (AWS-Style)
+
+**Gradient Layers:**
+```css
+background:
+  radial-gradient(60% 80% at 15% 30%, rgba(124, 58, 237, 0.55), transparent 60%),
+  radial-gradient(55% 75% at 85% 40%, rgba(56, 189, 248, 0.45), transparent 60%),
+  radial-gradient(40% 60% at 70% 85%, rgba(234, 179, 8, 0.35), transparent 65%),
+  linear-gradient(120deg, #1e1b4b, #4c1d95, #0f766e, #1e293b);
+background-size: 200% 200%;
+animation: gradient-drift 22s ease-in-out infinite;
+```
+
+**Noise Texture:**
+```css
+background-image: url("data:image/svg+xml,...");
+opacity: 0.045;
+```
+
+**Dark Overlay:**
+```css
+background: rgba(0, 0, 0, 0.55);
+```
+
+**Fade to Content:**
+```css
+/* Bottom fade */
+background: linear-gradient(to top, neutral-950, transparent);
+height: 96px;
+```
+
+### Section Background (Lighter Variant)
+Same structure as hero but with reduced opacity:
+- Purple: `rgba(124, 58, 237, 0.35)`
+- Blue: `rgba(56, 189, 248, 0.30)`
+- Amber: `rgba(234, 179, 8, 0.25)`
+
+### Gradient Divider
+```css
+height: 1px;
+background: linear-gradient(90deg,
+  transparent,
+  rgba(124, 58, 237, 0.6),
+  rgba(236, 72, 153, 0.6),
+  rgba(234, 179, 8, 0.6),
+  transparent);
+background-size: 200% 100%;
+animation: divider-drift 14s linear infinite;
+```
+
+---
+
+## Animation & Motion
+
+### Transition Timings
+- Fast: `0.3s ease` - Hover effects, quick interactions
+- Medium: `0.4s ease` - Button effects
+- Slow: `0.7-0.8s ease` - Reveals, opacity changes
+
+### Keyframe Animations
+
+**Gradient Drift:**
+```css
+@keyframes gradient-drift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+```
+
+**Divider Drift:**
+```css
+@keyframes divider-drift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+```
+
+**Reveal Animation:**
+```css
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+```
+
+---
+
+## Navigation
+
+### Desktop Navigation
+- Fixed top position
+- Height: 80px
+- Background: `bg-neutral-900/70 backdrop-blur`
+- Border bottom: `border-neutral-800`
+- Font size: 16px (base)
+- Link colour: `text-neutral-400`
+- Hover: `text-teal-400`
+- Active: `text-teal-400 font-medium underline decoration-2 underline-offset-4`
+
+### Mobile Navigation
+- Hamburger menu with animated bars
+- Sliding menu (max-height animation)
+- Gap between links: 20px (`gap-5`)
+- Active indicator: Left border in teal
+- Backdrop blur on menu background
+
+---
+
+## Content Guidelines
+
+### Voice & Tone
+- **Professional:** Technical but accessible
+- **Confident:** Showcase expertise without arrogance
+- **Clear:** Avoid jargon where possible; explain when necessary
+- **Action-oriented:** Focus on outcomes and business value
+
+### Writing Style
+- Use Australian English spelling (e.g., "optimisation", "visualisation")
+- Active voice preferred
+- Short, scannable paragraphs
+- Bullet points for lists
+- Sentence case for headings
+
+### Project Descriptions
+**Structure:**
+1. Business problem/context
+2. Technical approach
+3. Tools & methods
+4. Outcomes & insights
+
+**Length:**
+- Hero descriptions: 40-60 words
+- Card descriptions: 20-30 words
+- Detailed project pages: 200-400 words
+
+---
+
+## Technical Stack Tags
+
+### Colour Coding
+```css
+.tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+```
+
+**By Category:**
+- Core Libraries: `bg-teal-500/20 text-teal-300`
+- ML Framework: `bg-purple-500/20 text-purple-300`
+- Visualisation: `bg-amber-500/20 text-amber-300`
+- Databases: `bg-indigo-500/20 text-indigo-300`
+- Programming: `bg-cyan-500/20 text-cyan-300`
+
+---
+
+## Accessibility Standards
+
+### Contrast Ratios
+- Body text on background: Minimum 4.5:1
+- Heading text on background: Minimum 3:1
+- Interactive elements: Clear focus states
+
+### Focus States
+```css
+focus:outline-none focus:ring-2 focus:ring-teal-400
+```
+
+### Semantic HTML
+- Use proper heading hierarchy (H1 → H2 → H3)
+- Alt text for all images
+- ARIA labels for interactive elements
+- Semantic nav, section, footer elements
+
+---
+
+## Responsive Breakpoints
+
+### Tailwind Breakpoints
+- **Mobile:** Default (< 768px)
+- **Tablet:** `md:` (≥ 768px)
+- **Desktop:** `lg:` (≥ 1024px)
+- **Wide:** `xl:` (≥ 1280px)
+
+### Grid Patterns
+- Mobile: 1 column
+- Tablet: 2 columns (`md:grid-cols-2`)
+- Desktop: 3-4 columns (`lg:grid-cols-3` or `lg:grid-cols-4`)
+
+---
+
+## File Naming Conventions
+
+### Pages
+- Lowercase with hyphens: `about.html`, `sales-forecasting.html`
+- No spaces or special characters
+
+### Images
+- Descriptive names: `dashboard1.png`, `sentiment.png`
+- Consistent capitalisation (prefer lowercase)
+
+### CSS/JS
+- Purpose-based: `style.css`, `nav.js`
+- Kebab-case for multi-word files
+
+---
+
+## Usage Guidelines
+
+### Do's
+✓ Use consistent spacing throughout  
+✓ Apply card-hover effects to interactive elements  
+✓ Include accent borders for emphasis  
+✓ Use gradient backgrounds for hero sections  
+✓ Maintain clear visual hierarchy  
+✓ Provide clear CTAs on every page  
+
+### Don'ts
+✗ Mix different button styles on same page  
+✗ Use colours outside the defined palette  
+✗ Overuse animations (subtle is better)  
+✗ Create walls of text without spacing  
+✗ Use absolute black (#000000)  
+✗ Forget mobile responsiveness  
+
+---
+
+## Contact Information Display
+
+### Social Links
+- GitHub: Purple accent
+- LinkedIn: Blue accent
+- Email: Blue accent
+- Microsoft Fabric: Teal accent
+
+### Footer
+- Centred alignment
+- Single line copyright
+- Links below in horizontal layout
+- Subtle text colour: `text-neutral-500`
+
+---
+
+## Version Control
+
+**Version:** 1.0  
+**Last Updated:** January 2026  
+**Maintained By:** Bolat Tulekov
+
+---
+
+*These guidelines ensure consistency across all pages and maintain the professional, modern aesthetic of the Data Science Portfolio.*
