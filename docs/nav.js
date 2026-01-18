@@ -61,7 +61,7 @@ function initNav() {
     }
   });
 
-  // Mobile nav links - with inline underline instead of full-width
+  // Mobile nav links - with border on left side instead of underline
   document.querySelectorAll(".nav-link-mobile").forEach(link => {
     const linkPage = link.getAttribute("href").split("/").pop();
     
@@ -69,19 +69,20 @@ function initNav() {
       link.classList.add(
         "text-teal-400",
         "font-medium",
-        "inline-block",
-        "border-b-2",
+        "border-l-3",
         "border-teal-400",
-        "pb-1"
+        "pl-3",
+        "-ml-3"
       );
       link.classList.remove("text-neutral-300");
     } else {
       link.classList.remove(
         "text-teal-400",
         "font-medium",
-        "border-b-2",
+        "border-l-3",
         "border-teal-400",
-        "pb-1"
+        "pl-3",
+        "-ml-3"
       );
       link.classList.add("text-neutral-300");
     }
