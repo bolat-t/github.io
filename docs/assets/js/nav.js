@@ -39,18 +39,26 @@ function initNav() {
 }
 
 function highlightActiveLink() {
-  const current = location.pathname.split("/").pop() || 'index.html';
+  const path = window.location.pathname;
+  // Handle root path
+  const current = (path === '/' || path.endsWith('/')) ? 'index.html' : path.split("/").pop();
   const cleanCurrent = current.split('#')[0].split('?')[0];
 
   document.querySelectorAll('#nav-placeholder a').forEach(a => {
     const href = a.getAttribute('href');
     if (!href) return;
 
-    if (href === cleanCurrent || (cleanCurrent === 'index.html' && href === './')) {
+    // Normalize href: remove leading slash if present
+    const cleanHref = href.startsWith('/') ? href.substring(1) : href;
+
+    if (cleanHref === cleanCurrent) {
       a.classList.add('text-teal-400', 'font-medium');
       a.classList.remove('text-neutral-400');
     } else {
       a.classList.remove('text-teal-400', 'font-medium');
+      // Only add text-neutral-400 if it's not a mobile link (mobile links are handled by parent)
+      // Actually, desktop parent has text-neutral-400, so we just remove the active class.
+      // But let's be safe and ensure no teal residue.
     }
   });
 }
