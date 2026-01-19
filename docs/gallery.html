@@ -1,64 +1,66 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Gallery - Data Science Portfolio</title>
+    <title>Bolat Tulekov - Project Gallery</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
 
 
-<div id="nav-placeholder"></div>
+    <div id="nav-placeholder"></div>
 
 
 
-<!-- Page Header -->
-<section class="aws-hero-bg relative px-6 pt-56 pb-24 fade-in">
+    <!-- Page Header -->
+    <section class="aws-hero-bg relative px-6 pt-56 pb-24 fade-in">
 
-    <!-- dark overlay -->
-    <div class="aws-hero-overlay absolute inset-0 bg-black/40 z-0"></div>
+        <!-- dark overlay -->
+        <div class="aws-hero-overlay absolute inset-0 bg-black/40 z-0"></div>
 
-    <!-- content ABOVE overlay -->
-    <div class="relative z-10 max-w-3xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-            Dashboard Gallery
-        </h1>
-        <p class="text-neutral-400 leading-relaxed">
-            Explore a collection of interactive business dashboards and data visualizations built with Power BI, Excel,
-            and Figma.
-        </p>
-    </div>
-<div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
+        <!-- content ABOVE overlay -->
+        <div class="relative z-10 max-w-3xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                Dashboard Gallery
+            </h1>
+            <p class="text-neutral-400 leading-relaxed">
+                Explore a collection of interactive business dashboards and data visualizations built with Power BI,
+                Excel,
+                and Figma.
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
 
-</section>
+    </section>
 
 
 
-<!-- Filters/Search -->
-<section class="px-6 pt-10 mb-6">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 items-center">
-        <input type="text" placeholder="Search dashboards..."
-            class="flex-1 px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-purple-500">
+    <!-- Filters/Search -->
+    <section class="px-6 pt-10 mb-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 items-center">
+            <input type="text" placeholder="Search dashboards..."
+                class="flex-1 px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-purple-500">
 
-        <select
-            class="px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
-            <option>All Categories</option>
-            <option>Power BI</option>
-            <option>Excel</option>
-            <option>Figma</option>
-        </select>
+            <select
+                class="px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <option>All Categories</option>
+                <option>Power BI</option>
+                <option>Excel</option>
+                <option>Figma</option>
+            </select>
 
-        <select
-            class="px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
-            <option>Newest</option>
-            <option>Oldest</option>
-        </select>
-    </div>
-</section>
+            <select
+                class="px-4 py-2 rounded-md border border-neutral-700 bg-neutral-900 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <option>Newest</option>
+                <option>Oldest</option>
+            </select>
+        </div>
+    </section>
 
 
     <!-- Dashboard Grid -->
@@ -67,7 +69,8 @@
             <!-- Dashboard Card -->
             <a href="projects/dashboard1.html"
                 class="bg-neutral-800 rounded-lg overflow-hidden card-hover border border-neutral-700 transition">
-                <img src="images/dashboard1.png" alt="Financial Performance Dashboard" class="w-full h-48 object-cover">
+                <img src="assets/images/dashboard1.png" alt="Financial Performance Dashboard"
+                    class="w-full h-48 object-cover">
                 <div class="p-4">
                     <h3 class="text-lg font-semibold text-white mb-1">Financial Performance Dashboard</h3>
                     <div class="flex gap-2 flex-wrap">
@@ -81,7 +84,8 @@
             <!-- Duplicate this card for other dashboards -->
             <a href="projects/dashboard2.html"
                 class="bg-neutral-800 rounded-lg overflow-hidden card-hover border border-neutral-700 transition">
-                <img src="images/dashboard2.png" alt="Executive Performance Dashboard" class="w-full h-48 object-cover">
+                <img src="assets/images/dashboard2.png" alt="Executive Performance Dashboard"
+                    class="w-full h-48 object-cover">
                 <div class="p-4">
                     <h3 class="text-lg font-semibold text-white mb-1">Executive Performance Dashboard</h3>
                     <div class="flex gap-2 flex-wrap">
@@ -109,16 +113,16 @@
                 class="px-4 py-2 rounded-md bg-neutral-800 border border-neutral-700 hover:bg-purple-600/20 transition">Next</button>
         </div>
     </section>
-<!-- FOOTER -->
-<footer id="contact" class="border-t border-neutral-800 py-12 text-center">
-    <p class="text-neutral-500 text-sm mb-4">
-        © 2026 Bolat Tulekov
-    </p>
-    <div class="flex justify-center gap-6 text-sm">
-        <a href="https://github.com/bolat-t" class="text-neutral-400 hover:text-teal-400">GitHub</a>
-        <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
-    </div>
-</footer>
+    <!-- FOOTER -->
+    <footer id="contact" class="border-t border-neutral-800 py-12 text-center">
+        <p class="text-neutral-500 text-sm mb-4">
+            © 2026 Bolat Tulekov
+        </p>
+        <div class="flex justify-center gap-6 text-sm">
+            <a href="https://github.com/bolat-t" class="text-neutral-400 hover:text-teal-400">GitHub</a>
+            <a href="https://www.linkedin.com" class="text-neutral-400 hover:text-teal-400">LinkedIn</a>
+        </div>
+    </footer>
     <!-- Code injected by live-server -->
     <script>
         // <![CDATA[  <-- For SVG support
@@ -179,16 +183,8 @@
                 });
             });
     </script>
-    <script src="nav.js"></script>
-<script src="/docs/nav.js"></script>
-<script>
-    fetch('/nav.html')
-        .then(r => r.text())
-        .then(html => {
-            document.getElementById('nav-placeholder').innerHTML = html;
-            initNav();
-        });
-</script>
+    <script src="assets/js/nav.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "github.io",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i docs/assets/css/input.css -o docs/assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolat-t/github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bolat-t/github.io/issues"
+  },
+  "homepage": "https://github.com/bolat-t/github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.18"
+  }
+}

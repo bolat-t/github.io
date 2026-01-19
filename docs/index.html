@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Science Portfolio</title>
+  <title>Bolat Tulekov - Data Science Portfolio</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 
@@ -53,7 +54,7 @@
 
           <div class="flex gap-4">
             <a href="#projects"
-              class="bg-teal-500/10 text-teal-300 border border-teal-500/30 px-8 py-3 rounded-md text-sm font-medium hover:bg-teal-500/20 transition">
+              class="bg-teal-500 text-neutral-900 px-8 py-3 rounded-md text-sm font-medium hover:bg-teal-400 transition">
               View Work
             </a>
             <a href="contact.html"
@@ -71,7 +72,7 @@
             <!-- Slide 1 -->
             <a href="projects/churn-prediction.html"
               class="carousel-slide visible-slide w-full block cursor-pointer relative">
-              <img src="images/dashboard1.png" class="w-full h-auto object-cover rounded-lg"
+              <img src="assets/images/dashboard1.png" class="w-full h-auto object-cover rounded-lg"
                 alt="Customer Churn Prediction Dashboard">
               <div
                 class="absolute bottom-3 right-3 text-xs bg-neutral-900/70 text-neutral-300 px-3 py-1 rounded-md pointer-events-none">
@@ -82,7 +83,7 @@
             <!-- Slide 2 -->
             <a href="projects/employee-sentiment.html"
               class="carousel-slide hidden-slide w-full block cursor-pointer relative">
-              <img src="images/dashboard2.png" class="w-full h-auto object-cover rounded-lg"
+              <img src="assets/images/dashboard2.png" class="w-full h-auto object-cover rounded-lg"
                 alt="Employee Sentiment Analysis Dashboard">
               <div
                 class="absolute bottom-3 right-3 text-xs bg-neutral-900/70 text-neutral-300 px-3 py-1 rounded-md pointer-events-none">
@@ -93,7 +94,7 @@
             <!-- Slide 3 -->
             <a href="projects/sales-forecasting.html"
               class="carousel-slide hidden-slide w-full block cursor-pointer relative">
-              <img src="images/dashboard3.png" class="w-full h-auto object-cover rounded-lg"
+              <img src="assets/images/dashboard3.png" class="w-full h-auto object-cover rounded-lg"
                 alt="Sales Forecasting Dashboard">
               <div
                 class="absolute bottom-3 right-3 text-xs bg-neutral-900/70 text-neutral-300 px-3 py-1 rounded-md pointer-events-none">
@@ -104,12 +105,12 @@
           </div>
 
           <!-- ARROWS -->
-          <button onclick="prevSlide()"
+          <button id="prevBtn"
             class="absolute left-2 top-1/2 -translate-y-1/2 px-3 py-2 bg-neutral-900/70 text-neutral-300 rounded-md hover:bg-neutral-800 z-10">
             ‹
           </button>
 
-          <button onclick="nextSlide()"
+          <button id="nextBtn"
             class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-2 bg-neutral-900/70 text-neutral-300 rounded-md hover:bg-neutral-800 z-10">
             ›
           </button>
@@ -157,35 +158,6 @@
     }
   </style>
 
-  <!-- CAROUSEL SCRIPT -->
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".carousel-slide");
-    const dots = document.querySelectorAll(".dot");
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("visible-slide", i === index);
-        slide.classList.toggle("hidden-slide", i !== index);
-      });
-
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("bg-teal-400", i === index);
-        dot.classList.toggle("bg-neutral-600", i !== index);
-      });
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-  </script>
-
 
 
 
@@ -211,7 +183,7 @@
                   hover:border-teal-500/40 transition">
 
           <div class="bg-neutral-800 aspect-video flex items-center justify-center">
-            <img src="images/churn.png" alt="Churn Prediction" class="w-24 h-24" />
+            <img src="assets/images/churn.png" alt="Churn Prediction" class="w-24 h-24" />
           </div>
 
           <div class="p-4">
@@ -230,7 +202,7 @@
                     hover:border-amber-500/40 transition cursor-pointer">
 
           <div class="bg-neutral-800 aspect-video flex items-center justify-center">
-            <img src="images/sentiment.png" alt="Sales Forecasting" class="w-24 h-24" />
+            <img src="assets/images/sentiment.png" alt="Sales Forecasting" class="w-24 h-24" />
           </div>
 
           <div class="p-4">
@@ -253,7 +225,7 @@
 
 
           <div class="bg-neutral-800 aspect-video flex items-center justify-center">
-            <img src="images/databricks.svg" alt="Sales Forecasting" class="w-32 h-32" />
+            <img src="assets/images/databricks.svg" alt="Sales Forecasting" class="w-32 h-32" />
           </div>
 
 
@@ -268,19 +240,19 @@
 
 
 
-        <a href="projects/personal-finance-dashboard.html" class="block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+        <a href="projects/coastal-analytics.html" class="block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
                       hover:border-indigo-500/40 transition cursor-pointer">
 
           <div class="bg-neutral-800 aspect-video flex items-center justify-center">
-            <img src="images/powerbi.png" alt="BI" class="w-24 h-24" />
+            <img src="assets/images/powerbi.png" alt="BI" class="w-24 h-24" />
           </div>
 
           <div class="p-4">
-            <p class="text-xs text-neutral-500 mb-1">Personal</p>
+            <p class="text-xs text-neutral-500 mb-1">Data Engineering</p>
             <h3 class="text-neutral-100 font-medium mb-2">
-              Personal Finance Dashboard
+              Coastal Analytics
             </h3>
-            <span class="text-sm text-indigo-400 pointer-events-none">
+            <span class="text-sm text-emerald-400 pointer-events-none">
               View project →
             </span>
           </div>
@@ -397,7 +369,8 @@
   <div id="nav-placeholder"></div>
 
   <!-- Scripts -->
-  <script src="nav.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/carousel.js"></script>
   <script>
     // Load nav dynamically and initialize hamburger + active link
     document.addEventListener('DOMContentLoaded', () => {

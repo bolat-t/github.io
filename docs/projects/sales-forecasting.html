@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sales Forecasting | Data Science Portfolio</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
   <style>
@@ -32,6 +33,10 @@
       overflow-x: auto;
     }
   </style>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
+  </script>
 </head>
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
@@ -55,14 +60,14 @@
   <section class="relative overflow-hidden pt-24 pb-20 px-6">
 
     <!-- Background -->
-    <div class="absolute inset-0">
-      <!-- Radial layers -->
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]">
-      </div>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Radial layers -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]">
+    </div>
 
-      <!-- Base gradient -->
-      <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-sky-800 to-indigo-700 opacity-90"></div>
+    <!-- Base gradient -->
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-sky-800 to-indigo-700 opacity-90"></div>
     </div>
 
     <!-- Content -->
@@ -218,34 +223,69 @@
     </div>
   </section>
 
-  <!-- DATABRICKS PIPELINE DIAGRAM -->
+  <!-- MEDALLION ARCHITECTURE DIAGRAM -->
   <section class="pb-24 px-6">
     <div class="max-w-6xl mx-auto">
-
-      <h3 class="text-xl font-semibold mb-6">
-        Databricks Job Pipeline Architecture
-      </h3>
-
+      <h3 class="text-xl font-semibold mb-6">Medallion Architecture Data Flow</h3>
       <div class="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden shadow-lg">
-
-        <!-- IMAGE -->
-        <div class="relative aspect-[16/9] md:aspect-[21/9] bg-neutral-800">
-          <img src="../images/Pipeline.png." alt="Databricks Job Pipeline Architecture"
-            class="absolute inset-0 w-full h-full object-contain p-4 md:p-8" />
+        <div class="relative w-full">
+          <img src="../assets/images/Pipeline.png" alt="Databricks Job Pipeline Architecture"
+            class="w-full h-auto object-cover" />
         </div>
-
-        <!-- CAPTION -->
-        <div class="border-t border-neutral-800 px-6 py-4">
-          <p class="text-neutral-400 text-sm leading-relaxed max-w-5xl">
-            The diagram illustrates the orchestration of Bronze, Silver, and Gold
-            data processing tasks using Databricks Jobs. Each stage is
-            dependency-aware, ensuring data quality, traceability, and repeatable
-            execution across pipeline runs.
-          </p>
-        </div>
-
       </div>
+      <p class="mt-4 text-center text-neutral-500 text-sm">
+        Live visualisation of the Delta Lake pipeline topology.
+      </p>
+    </div>
+  </section>
 
+  <!-- CODE SPOTLIGHT -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-xl font-semibold mb-6">Production Code: Gold Layer Logic</h3>
+      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
+        <p class="text-neutral-400 text-sm mb-4">
+          Example of a Gold-layer transformation using PySpark Window functions to generate feature-rich datasets for
+          the forecasting model.
+          This logic runs incrementally on Databricks clusters.
+        </p>
+
+        <div class="code-block bg-[#0d1117] p-4 rounded-md overflow-x-auto border border-neutral-800">
+          <pre><code class="language-python text-sm text-blue-300">from pyspark.sql import Window
+import pyspark.sql.functions as F
+
+def generate_gold_features(silver_df):
+    """
+    Transforms clean Silver data into Gold-level features for forecasting.
+    Calculates rolling averages and week-over-week growth metrics.
+    """
+    
+    # 1. Define window for 7-day rolling metrics per region
+    window_7d = Window.partitionBy("region_id").orderBy("transaction_date").rowsBetween(-6, 0)
+    
+    # 2. Key Business Metrics Calculation
+    gold_df = silver_df.withColumn(
+        "rolling_7d_revenue", 
+        F.avg("daily_revenue").over(window_7d)
+    ).withColumn(
+        "transaction_volume_momentum",
+        F.count("transaction_id").over(window_7d) / 7
+    ).withColumn(
+        "is_holiday_surge",
+        F.when(F.col("daily_revenue") > (F.col("rolling_7d_revenue") * 1.5), 1).otherwise(0)
+    )
+    
+    # 3. Write to Delta Lake with Schema Enforcement and Optimisation
+    (gold_df.write
+        .format("delta")
+        .mode("overwrite")
+        .option("mergeSchema", "true")
+        .saveAsTable("gold.sales_features_weekly")
+    )
+    
+    return gold_df</code></pre>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -290,7 +330,7 @@
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
           <ul class="text-neutral-400 text-sm space-y-2 list-disc list-inside">
-            <li>ETL Optimization</li>
+            <li>ETL Optimisation</li>
             <li>Schema Enforcement</li>
             <li>Data Warehousing</li>
             <li>BI-Ready Modeling</li>
@@ -367,4 +407,4 @@
         });
       });
   </script>
-  <script src="../nav.js"></script>
+  <script src="../assets/js/nav.js"></script>
