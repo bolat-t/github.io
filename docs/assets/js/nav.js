@@ -21,12 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initNav() {
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuButton = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
 
   if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      // Toggle the max-height class to animate opening/closing
+      if (mobileMenu.classList.contains('max-h-0')) {
+        mobileMenu.classList.remove('max-h-0');
+        mobileMenu.classList.add('max-h-screen');
+      } else {
+        mobileMenu.classList.add('max-h-0');
+        mobileMenu.classList.remove('max-h-screen');
+      }
     });
   }
 }
