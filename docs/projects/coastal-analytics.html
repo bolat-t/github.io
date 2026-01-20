@@ -6,8 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coastal Analytics | Data Science Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .6);
+    }
+
+    .metric-card {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    }
+  </style>
 </head>
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
@@ -33,12 +46,12 @@
     </div>
 
     <div class="relative z-10 max-w-5xl mx-auto">
-      <p class="text-sm text-cyan-200 mb-3 uppercase tracking-wide">Data Engineering & APIs</p>
+      <p class="text-sm text-cyan-200 mb-3 uppercase tracking-wide">Microsoft Fabric & Power BI</p>
       <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6">Coastal Analytics: Real-Time Surf Intelligence</h1>
       <p class="text-xl text-cyan-100 mb-6">Automated data pipeline for predictive recreational planning</p>
       <p class="text-cyan-100/90 leading-relaxed max-w-3xl">
-        A serverless data pipeline that monitors micro-climate conditions. Ingests API data from OpenWeatherMap and
-        SwellInfo, processes it via Python cloud functions, and delivers "Go/No-Go" decision metrics to a PowerBI
+        A serverless data pipeline built entirely within Microsoft Fabric. Ingests weather API data via Dataflows,
+        processes it with Power Query, and delivers "Go/No-Go" decision metrics through a mobile-optimised Power BI
         dashboard.
       </p>
     </div>
@@ -54,12 +67,12 @@
         <div class="text-sm text-neutral-400">Automated Runs</div>
       </div>
       <div class="metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
-        <div class="text-4xl font-bold text-cyan-400 mb-2">3+</div>
-        <div class="text-sm text-neutral-400">API Sources</div>
+        <div class="text-4xl font-bold text-cyan-400 mb-2">Fabric</div>
+        <div class="text-sm text-neutral-400">Native Platform</div>
       </div>
       <div class="metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-blue-400 mb-2">&lt;5m</div>
-        <div class="text-sm text-neutral-400">Alert Latency</div>
+        <div class="text-sm text-neutral-400">Refresh Latency</div>
       </div>
       <div class="metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-indigo-400 mb-2">Hourly</div>
@@ -77,24 +90,26 @@
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
           <h3 class="text-teal-400 font-medium mb-3">🎯 Problem</h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
-            Surf conditions are complex and fleeting. Checking 5+ divergent apps/cams manually resulted in missed
-            "Golden Hour" sessions.
+            Surf conditions are complex and fleeting. Checking multiple weather sources manually resulted in missed
+            optimal sessions.
           </p>
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
           <h3 class="text-cyan-400 font-medium mb-3">🔍 Approach</h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
-            Built a "Personal Data Engineer" pipeline. Using Python to scrape and normalize data from heterogeneous
-            APIs, applying custom logic (Wind &lt; 15km/h + Swell &gt; 1m) to generate a binary "Surf Score".
+            Built a "Personal Data Engineer" pipeline using Microsoft Fabric Dataflows to ingest and transform weather
+            API data,
+            applying custom logic (Wind < 15km/h + Swell> 1m) to generate a binary "Surf Score".
           </p>
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-indigo-400 font-medium mb-3">🚀 Automations</h3>
+          <h3 class="text-indigo-400 font-medium mb-3">🚀 Automation</h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
-            Refreshes hourly via GitHub Actions. Push notifications sent via Telegram Bot when conditions match the
-            "Golden" criteria.
+            Scheduled refresh via Fabric's built-in orchestration. Power Automate sends mobile notifications when
+            conditions
+            match the "Golden" criteria.
           </p>
         </div>
       </div>
@@ -106,7 +121,6 @@
     <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Live Dashboard</h2>
       <div class="relative w-full pb-[62.25%] overflow-hidden rounded-lg border border-neutral-800 shadow-md">
-        <!-- Placeholder for actual PowerBI embed URL if specific one exists, otherwise keep existing beach one or generic placeholder -->
         <iframe title="Surf Intelligence Dashboard"
           src="https://app.powerbi.com/view?r=eyJrIjoiZDQzOGIyNTItMWQ2Yy00NTQyLThiMzAtOGExYTQyODdiM2NjIiwidCI6IjM0NTBlNzcwLWU1ODAtNDgwYi1iNWVmLTNjMjBlMzVkYmE0ZSJ9"
           class="absolute top-0 left-0 w-full h-full border-0" allowFullScreen="true">
@@ -119,34 +133,28 @@
   <section class="pb-24 px-6">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Technical Stack</h2>
-      <div class="grid md:grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
           <h3 class="text-teal-400 font-medium mb-3">Ingestion</h3>
           <ul class="text-sm text-neutral-400 space-y-1">
-            <li>Python (Requests)</li>
-            <li>Pandas</li>
-            <li>JSON/XML Parsing</li>
+            <li>Fabric Dataflows Gen2</li>
+            <li>Power Query M</li>
+            <li>REST API Connectors</li>
           </ul>
         </div>
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
           <h3 class="text-cyan-400 font-medium mb-3">Orchestration</h3>
           <ul class="text-sm text-neutral-400 space-y-1">
-            <li>GitHub Actions</li>
-            <li>CRON Schedule</li>
+            <li>Fabric Scheduled Refresh</li>
+            <li>Power Automate Flows</li>
           </ul>
         </div>
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-          <h3 class="text-blue-400 font-medium mb-3">Visualization</h3>
+          <h3 class="text-blue-400 font-medium mb-3">Visualisation</h3>
           <ul class="text-sm text-neutral-400 space-y-1">
-            <li>Power BI</li>
+            <li>Power BI Service</li>
             <li>Mobile Layout</li>
-          </ul>
-        </div>
-        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-          <h3 class="text-indigo-400 font-medium mb-3">Alerting</h3>
-          <ul class="text-sm text-neutral-400 space-y-1">
-            <li>Telegram Bot API</li>
-            <li>Webhooks</li>
+            <li>Real-time Tiles</li>
           </ul>
         </div>
       </div>
@@ -158,7 +166,15 @@
     © 2026 Bolat Tulekov
   </footer>
 
-  <script src="../assets/js/nav.js"></script>
+  <script>
+    fetch('../nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        initNav();
+      });
+  </script>
+  <script src="../nav.js"></script>
 
 </body>
 
