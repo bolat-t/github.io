@@ -64,7 +64,7 @@
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
 
       <!-- LinkedIn -->
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
+      <div class="reveal bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
         <div class="mb-4">
           <img src="assets/images/linkedin.svg" alt="LinkedIn" class="w-8 h-8 text-teal-400">
         </div>
@@ -82,7 +82,7 @@
       </div>
 
       <!-- GitHub -->
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
+      <div class="reveal reveal-delay-1 bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
         <div class="mb-4">
           <img src="assets/images/github.svg" alt="Github" class="w-8 h-8 text-teal-400">
         </div>
@@ -100,7 +100,7 @@
       </div>
 
       <!-- Microsoft Fabric -->
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
+      <div class="reveal reveal-delay-2 bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
         <div class="mb-4">
           <img src="assets/images/fabric.svg" alt="Microsoft Fabric Community" class="w-8 h-8 text-teal-400">
         </div>
@@ -118,7 +118,7 @@
       </div>
 
       <!-- Email -->
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
+      <div class="reveal reveal-delay-3 bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition flex flex-col h-full">
         <div class="mb-4">
           <img src="assets/images/outlook.png" alt="Outlook" class="w-8 h-8 text-teal-400">
         </div>
@@ -161,11 +161,15 @@
     © 2026 Bolat Tulekov
   </footer>
 
-  <!-- Placeholder for nav -->
-  <div id="nav-placeholder"></div>
-
-  <!-- Load nav dynamically -->
   <script src="assets/js/nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
 
 
 

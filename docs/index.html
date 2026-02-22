@@ -16,6 +16,8 @@
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
 
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
 
   <div id="nav-placeholder"></div>
 
@@ -40,7 +42,7 @@
           </p>
 
           <h1 class="text-5xl font-semibold text-neutral-100 mb-6 leading-tight">
-            Transforming Data into<br />Business Intelligence
+            <span id="hero-typewriter"></span><span class="typewriter-cursor"></span>
           </h1>
 
           <p class="text-xl text-neutral-300 mb-6">
@@ -178,11 +180,14 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <!-- Card -->
-        <a href="projects/churn.html" class="block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+        <a href="projects/churn.html" class="reveal block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
                   hover:border-teal-500/40 transition">
 
-          <div class="bg-neutral-800 aspect-video flex items-center justify-center">
-            <img src="assets/images/churn.png" alt="Churn Prediction" class="w-24 h-24" />
+          <div class="relative aspect-video flex items-center justify-center bg-neutral-950 overflow-hidden">
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 60%, rgba(45,212,191,0.15) 0%, transparent 70%)"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-16 h-16 text-teal-400/75 relative z-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+            </svg>
           </div>
 
           <div class="p-4">
@@ -197,11 +202,14 @@
         </a>
 
 
-        <a href="projects/employee-sentiment.html" class="block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+        <a href="projects/employee-sentiment.html" class="reveal reveal-delay-1 block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
                     hover:border-amber-500/40 transition cursor-pointer">
 
-          <div class="bg-neutral-800 aspect-video flex items-center justify-center">
-            <img src="assets/images/sentiment.png" alt="Sales Forecasting" class="w-24 h-24" />
+          <div class="relative aspect-video flex items-center justify-center bg-neutral-950 overflow-hidden">
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 60%, rgba(251,191,36,0.15) 0%, transparent 70%)"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-16 h-16 text-amber-400/75 relative z-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+            </svg>
           </div>
 
           <div class="p-4">
@@ -218,7 +226,7 @@
 
 
         <!-- Card -->
-        <a href="projects/sales-forecasting.html" class="block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+        <a href="projects/sales-forecasting.html" class="reveal reveal-delay-2 block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
                           hover:border-emerald-500/40 transition cursor-pointer">
 
 
@@ -239,7 +247,7 @@
 
 
 
-        <a href="projects/coastal-analytics.html" class="block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+        <a href="projects/coastal-analytics.html" class="reveal reveal-delay-3 block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
                       hover:border-indigo-500/40 transition cursor-pointer">
 
           <div class="bg-neutral-800 aspect-video flex items-center justify-center">
@@ -287,7 +295,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
 
           <!-- ML / AI -->
-          <div class="bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
+          <div class="reveal bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
             <h3 class="text-teal-400 font-medium">Machine Learning & AI</h3>
             <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
@@ -297,7 +305,7 @@
 
           <!-- BI -->
           <div
-            class="bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg md:col-span-2 lg:col-span-1">
+            class="reveal reveal-delay-1 bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg md:col-span-2 lg:col-span-1">
             <h3 class="text-amber-300 font-medium">BI, Visualisation & Automation</h3>
             <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
@@ -306,7 +314,7 @@
           </div>
 
           <!-- Data Platforms -->
-          <div class="bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
+          <div class="reveal reveal-delay-2 bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
             <h3 class="text-emerald-400 font-medium">Data Platforms</h3>
             <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
@@ -315,7 +323,7 @@
           </div>
 
           <!-- Databases -->
-          <div class="bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
+          <div class="reveal reveal-delay-3 bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
             <h3 class="text-indigo-400 font-medium">Databases</h3>
             <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
@@ -324,7 +332,7 @@
           </div>
 
           <!-- Programming -->
-          <div class="bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
+          <div class="reveal reveal-delay-4 bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
             <h3 class="text-cyan-400 font-medium">Programming</h3>
             <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
@@ -364,11 +372,8 @@
     </div>
   </footer>
 
-  <!-- Placeholder for nav -->
-  <div id="nav-placeholder"></div>
-
   <!-- Scripts -->
-  <script src="nav.js"></script>
+  <script src="assets/js/nav.js"></script>
   <script>
     // Carousel functionality
     let currentSlide = 0;
@@ -404,24 +409,45 @@
     });
   </script>
   <script>
-    // Load nav dynamically and initialize hamburger + active link
     document.addEventListener('DOMContentLoaded', () => {
-      fetch('nav.html')
-        .then(response => response.text())
-        .then(html => {
-          document.getElementById('nav-placeholder').innerHTML = html;
-          initNav(); // Handles hamburger + active link highlighting
-        })
-        .catch(err => console.error("Failed to load nav:", err));
-
       // Intersection Observer for reveal animations
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       }, { threshold: 0.12 });
-
       document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+      // Typewriter on hero heading
+      const heroText = ['Transforming Data into\nBusiness Intelligence'];
+      const target = document.getElementById('hero-typewriter');
+      const cursor = document.querySelector('.typewriter-cursor');
+      const fullText = 'Transforming Data into\nBusiness Intelligence';
+      let i = 0;
+      function type() {
+        if (i < fullText.length) {
+          const ch = fullText[i];
+          if (ch === '\n') {
+            target.appendChild(document.createElement('br'));
+          } else {
+            target.appendChild(document.createTextNode(ch));
+          }
+          i++;
+          setTimeout(type, i < 22 ? 55 : 45);
+        } else {
+          // Stop blinking cursor after a short pause
+          setTimeout(() => { if (cursor) cursor.style.display = 'none'; }, 2000);
+        }
+      }
+      setTimeout(type, 300);
+
+      // Scroll progress bar
+      const bar = document.getElementById('scroll-progress');
+      window.addEventListener('scroll', () => {
+        const scrolled = document.documentElement.scrollTop;
+        const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        bar.style.width = (scrolled / total * 100) + '%';
+      }, { passive: true });
     });
   </script>
 </body>

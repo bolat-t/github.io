@@ -196,3 +196,63 @@ html {
     transform: translateY(0);
 }
 
+/* Staggered reveal delays */
+.reveal-delay-1 { transition-delay: 120ms; }
+.reveal-delay-2 { transition-delay: 240ms; }
+.reveal-delay-3 { transition-delay: 360ms; }
+.reveal-delay-4 { transition-delay: 480ms; }
+
+/* Card hover lift + teal glow */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(45, 212, 191, 0.12), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Hamburger → X animation */
+#menuBtn .bar {
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+#menuBtn.is-open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+#menuBtn.is-open .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+#menuBtn.is-open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Typewriter blinking cursor */
+.typewriter-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 0.85em;
+    background: #2dd4bf;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    border-radius: 1px;
+    animation: blink 0.8s ease-in-out infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, #2dd4bf 0%, #a78bfa 50%, #fbbf24 100%);
+    z-index: 200;
+    transition: width 80ms linear;
+    pointer-events: none;
+}
+

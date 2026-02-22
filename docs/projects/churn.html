@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Customer Churn Prediction | Data Science Portfolio</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
   <style>
     .card-hover {
@@ -49,8 +51,6 @@
 
   <!-- HERO SECTION -->
   <section class="relative overflow-hidden pt-24 pb-20 px-6">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
     <div class="absolute inset-0">
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]">
@@ -74,19 +74,19 @@
   <!-- KEY METRICS -->
   <section class="pb-16 px-6">
     <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6">
-      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal metric-card border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-teal-400 mb-2">91.5%</div>
         <div class="text-sm text-neutral-400">Best Model Accuracy</div>
       </div>
-      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-1 metric-card border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-purple-400 mb-2">3</div>
         <div class="text-sm text-neutral-400">Models Implemented</div>
       </div>
-      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-2 metric-card border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-amber-400 mb-2">85.3%</div>
         <div class="text-sm text-neutral-400">Average ROC-AUC</div>
       </div>
-      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-3 metric-card border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-emerald-400 mb-2">&lt;2s</div>
         <div class="text-sm text-neutral-400">Prediction Latency</div>
       </div>
@@ -99,7 +99,10 @@
       <h2 class="text-3xl font-semibold text-neutral-100 mb-6">Project Overview</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-teal-400 font-medium mb-3">🎯 Business Problem</h3>
+          <h3 class="flex items-center gap-2 text-teal-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" /></svg>
+            Business Problem
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             A telecom subscription service was facing increasing churn but lacked visibility into <em>who</em> was
             leaving and <em>why</em>.
@@ -107,7 +110,10 @@
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-purple-400 font-medium mb-3">🔍 Solution Approach</h3>
+          <h3 class="flex items-center gap-2 text-purple-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+            Solution Approach
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             Engineered a robust pipeline using aggregated usage logs and support ticket sentiment. Trained an XGBoost
             classifier with SMOTE for class imbalance, achieving 0.89 F1-score.
@@ -115,7 +121,10 @@
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-amber-400 font-medium mb-3">🚀 Business Impact</h3>
+          <h3 class="flex items-center gap-2 text-amber-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" /></svg>
+            Business Impact
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             Identified $2.3M in at-risk revenue annually; empowered retention teams to target interventions with 3x
             higher precision.
@@ -130,7 +139,10 @@
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-emerald-400 font-medium mb-3">✨ Key Features</h3>
+          <h3 class="flex items-center gap-2 text-emerald-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" /></svg>
+            Key Features
+          </h3>
           <ul class="text-neutral-400 text-sm space-y-2">
             <li>• Interactive Streamlit dashboard</li>
             <li>• Feature importance and SHAP analysis</li>
@@ -236,20 +248,15 @@
   </footer>
 
 
-  <script>
-    fetch('../nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-        initNav();
-        const current = location.pathname.split("/").pop();
-        document.querySelectorAll('#nav-placeholder a').forEach(a => {
-          if (a.getAttribute('href') === current) a.classList.add('text-teal-400', 'font-medium');
-          else a.classList.remove('text-teal-400', 'font-medium');
-        });
-      });
-  </script>
   <script src="../assets/js/nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
 
 </body>
 

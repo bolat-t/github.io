@@ -7,6 +7,7 @@
   <title>Sales Forecasting | Data Science Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
   <style>
     .card-hover {
@@ -33,10 +34,6 @@
       overflow-x: auto;
     }
   </style>
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
-  </script>
 </head>
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
@@ -59,8 +56,6 @@
   <!-- AWS-STYLE GRADIENT HERO -->
   <section class="relative overflow-hidden pt-24 pb-20 px-6">
 
-    <!-- Background -->
-    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Radial layers -->
     <div
       class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#7c3aed55,transparent_40%),radial-gradient(circle_at_80%_25%,#ec489955,transparent_40%),radial-gradient(circle_at_70%_75%,#f43f5e55,transparent_45%),radial-gradient(circle_at_30%_80%,#f59e0b55,transparent_45%)]">
@@ -119,7 +114,7 @@
   <section class="pb-24 px-6">
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
 
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+      <div class="reveal bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
         <h3 class="text-neutral-100 font-medium mb-3">Business Objective</h3>
         <p class="text-neutral-400 text-sm leading-relaxed">
           Sales reports took 4 days to generate due to manual CSV mashing.
@@ -127,7 +122,7 @@
         </p>
       </div>
 
-      <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
+      <div class="reveal reveal-delay-1 bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover transition">
         <h3 class="text-neutral-100 font-medium mb-3">Technical Objective</h3>
         <p class="text-neutral-400 text-sm leading-relaxed">
           Designed a Spark-based ETL pipeline using Databricks Jobs.
@@ -394,17 +389,12 @@ def generate_gold_features(silver_df):
     </div>
   </section>
 
-  <script>
-    fetch('../nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-        initNav();
-        const current = location.pathname.split("/").pop();
-        document.querySelectorAll('#nav-placeholder a').forEach(a => {
-          if (a.getAttribute('href') === current) a.classList.add('text-teal-400', 'font-medium');
-          else a.classList.remove('text-teal-400', 'font-medium');
-        });
-      });
-  </script>
   <script src="../assets/js/nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>

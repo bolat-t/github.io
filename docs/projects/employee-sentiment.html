@@ -75,19 +75,19 @@
   <!-- KEY METRICS -->
   <section class="pb-16 px-6">
     <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6">
-      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal metric-card border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-teal-400 mb-2">94.2%</div>
         <div class="text-sm text-neutral-400">Best Model Accuracy</div>
       </div>
-      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-1 metric-card border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-purple-400 mb-2">4</div>
         <div class="text-sm text-neutral-400">Model Approaches</div>
       </div>
-      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-2 metric-card border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-amber-400 mb-2">88.7%</div>
         <div class="text-sm text-neutral-400">Ensemble Accuracy</div>
       </div>
-      <div class="metric-card border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-3 metric-card border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-emerald-400 mb-2">&lt;1s</div>
         <div class="text-sm text-neutral-400">Processing Time</div>
       </div>
@@ -101,7 +101,10 @@
       <div class="grid md:grid-cols-2 gap-6">
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-teal-400 font-medium mb-3">🎯 Business Problem</h3>
+          <h3 class="flex items-center gap-2 text-teal-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" /></svg>
+            Business Problem
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             Marketing teams were reacting to PR crises hours too late due to slow batch reporting. They needed immediate
             visibility into brand sentiment trends.
@@ -109,7 +112,10 @@
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-purple-400 font-medium mb-3">🔍 Solution Approach</h3>
+          <h3 class="flex items-center gap-2 text-purple-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+            Solution Approach
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             Built a flexible architecture to ingest social data. Fine-tuned a BERT transformer model for specific domain
             sentiment analysis. Visualised live trends in a Streamlit dashboard for immediate insight.
@@ -117,7 +123,10 @@
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-amber-400 font-medium mb-3">🚀 Business Impact</h3>
+          <h3 class="flex items-center gap-2 text-amber-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" /></svg>
+            Business Impact
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             Reduced crisis response time from 4 hours to &lt;10 minutes. Processing 50k+ tweets/day with sub-second
             latency.
@@ -125,7 +134,10 @@
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-emerald-400 font-medium mb-3">✨ Key Features</h3>
+          <h3 class="flex items-center gap-2 text-emerald-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" /></svg>
+            Key Features
+          </h3>
           <ul class="text-neutral-400 text-sm space-y-2">
             <li>• Real-time sentiment classification</li>
             <li>• Interactive visualization dashboards</li>
@@ -451,77 +463,17 @@ print(f"Confidence: {result['confidence']:.2f}")
       font: { color: '#e5e7eb' }
     }, { responsive: true });
 
-    // Interactive Demo
-    document.getElementById('analyzeBtn').addEventListener('click', function () {
-      const text = document.getElementById('textInput').value.trim();
-
-      if (!text) {
-        alert('Please enter some text to analyze');
-        return;
-      }
-
-      // Simulate sentiment analysis (in production, this would call your API)
-      const mockAnalysis = analyzeMockSentiment(text);
-
-      // Display results
-      const resultsDiv = document.getElementById('results');
-      resultsDiv.classList.remove('hidden');
-
-      const sentimentEl = document.getElementById('ensembleSentiment');
-      sentimentEl.textContent = mockAnalysis.sentiment;
-      sentimentEl.className = `text-2xl font-bold ${mockAnalysis.sentiment === 'Positive' ? 'text-emerald-400' : 'text-red-400'}`;
-
-      document.getElementById('ensembleConfidence').textContent = `Confidence: ${mockAnalysis.confidence}`;
-
-      const agreementEl = document.getElementById('modelAgreement');
-      agreementEl.innerHTML = mockAnalysis.models.map(m =>
-        `<div class="flex justify-between text-sm">
-      <span class="text-neutral-400">${m.name}:</span>
-      <span class="${m.sentiment === 'Positive' ? 'text-emerald-400' : 'text-red-400'}">${m.sentiment} (${m.conf})</span>
-    </div>`
-      ).join('');
-    });
-
-    function analyzeMockSentiment(text) {
-      // Simple mock sentiment analysis based on keywords
-      const positiveWords = ['good', 'great', 'excellent', 'amazing', 'love', 'wonderful', 'fantastic', 'best', 'perfect', 'awesome'];
-      const negativeWords = ['bad', 'terrible', 'awful', 'hate', 'worst', 'poor', 'disappointing', 'waste', 'horrible'];
-
-      const lowerText = text.toLowerCase();
-      const posCount = positiveWords.filter(w => lowerText.includes(w)).length;
-      const negCount = negativeWords.filter(w => lowerText.includes(w)).length;
-
-      const sentiment = posCount > negCount ? 'Positive' : 'Negative';
-      const confidence = (0.75 + Math.random() * 0.2).toFixed(2);
-
-      return {
-        sentiment,
-        confidence,
-        models: [
-          { name: 'VADER', sentiment, conf: (0.70 + Math.random() * 0.25).toFixed(2) },
-          { name: 'TextBlob', sentiment, conf: (0.65 + Math.random() * 0.25).toFixed(2) },
-          { name: 'ML Model', sentiment, conf: (0.80 + Math.random() * 0.15).toFixed(2) },
-          { name: 'Transformer', sentiment, conf: (0.85 + Math.random() * 0.12).toFixed(2) }
-        ]
-      };
-    }
   </script>
 
-  <script>
-    fetch('../nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-        initNav();
-        const current = location.pathname.split("/").pop();
-        document.querySelectorAll('#nav-placeholder a').forEach(a => {
-          if (a.getAttribute('href') === current) a.classList.add('text-teal-400', 'font-medium');
-          else a.classList.remove('text-teal-400', 'font-medium');
-        });
-      });
-  </script>
   <script src="../assets/js/nav.js"></script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
 
 </body>
 

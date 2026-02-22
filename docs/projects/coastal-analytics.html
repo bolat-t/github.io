@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coastal Analytics | Data Science Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     .card-hover {
       transition: all 0.3s ease;
@@ -62,19 +62,19 @@
   <!-- KEY METRICS / STATS -->
   <section class="pb-16 px-6">
     <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6">
-      <div class="metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-teal-400 mb-2">100%</div>
         <div class="text-sm text-neutral-400">Automated Runs</div>
       </div>
-      <div class="metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-1 metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-cyan-400 mb-2">Fabric</div>
         <div class="text-sm text-neutral-400">Native Platform</div>
       </div>
-      <div class="metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-2 metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-blue-400 mb-2">&lt;5m</div>
         <div class="text-sm text-neutral-400">Refresh Latency</div>
       </div>
-      <div class="metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
+      <div class="reveal reveal-delay-3 metric-card bg-neutral-900 border border-neutral-800 rounded-lg p-6 text-center">
         <div class="text-4xl font-bold text-indigo-400 mb-2">Hourly</div>
         <div class="text-sm text-neutral-400">Refresh Rate</div>
       </div>
@@ -88,7 +88,10 @@
       <div class="grid md:grid-cols-3 gap-6">
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-teal-400 font-medium mb-3">🎯 Problem</h3>
+          <h3 class="flex items-center gap-2 text-teal-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" /></svg>
+            Problem
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             Surf conditions are complex and fleeting. Checking multiple weather sources manually resulted in missed
             optimal sessions.
@@ -96,7 +99,10 @@
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-cyan-400 font-medium mb-3">🔍 Approach</h3>
+          <h3 class="flex items-center gap-2 text-cyan-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+            Approach
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             Built a "Personal Data Engineer" pipeline using Microsoft Fabric Dataflows to ingest and transform weather
             API data,
@@ -105,7 +111,10 @@
         </div>
 
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 card-hover">
-          <h3 class="text-indigo-400 font-medium mb-3">🚀 Automation</h3>
+          <h3 class="flex items-center gap-2 text-indigo-400 font-medium mb-3">
+            <svg class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
+            Automation
+          </h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
             Scheduled refresh via Fabric's built-in orchestration. Power Automate sends mobile notifications when
             conditions
@@ -166,15 +175,15 @@
     © 2026 Bolat Tulekov
   </footer>
 
+  <script src="../assets/js/nav.js"></script>
   <script>
-    fetch('../nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-        initNav();
-      });
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
   </script>
-  <script src="../nav.js"></script>
 
 </body>
 

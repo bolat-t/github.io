@@ -26,14 +26,10 @@ function initNav() {
 
   if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
-      // Toggle the max-height class to animate opening/closing
-      if (mobileMenu.classList.contains('max-h-0')) {
-        mobileMenu.classList.remove('max-h-0');
-        mobileMenu.classList.add('max-h-screen');
-      } else {
-        mobileMenu.classList.add('max-h-0');
-        mobileMenu.classList.remove('max-h-screen');
-      }
+      const isOpen = !mobileMenu.classList.contains('max-h-0');
+      mobileMenu.classList.toggle('max-h-0', isOpen);
+      mobileMenu.classList.toggle('max-h-screen', !isOpen);
+      mobileMenuButton.classList.toggle('is-open', !isOpen);
     });
   }
 }
