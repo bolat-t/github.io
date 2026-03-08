@@ -7,22 +7,13 @@
   <meta name="description" content="Data science portfolio of Bolat Tulekov — Power BI dashboards, machine learning models, and data engineering solutions.">
   <title>Bolat Tulekov - Data Science Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <style>
-    .carousel-slide { transition: opacity 0.7s ease; }
-    .visible-slide  { opacity: 1; position: relative; }
-    .hidden-slide   { opacity: 0; pointer-events: none; position: absolute; inset: 0; }
-    .carousel-slide img { transition: transform 0.4s ease; }
-    .carousel-slide:hover img { transform: scale(1.01); }
-  </style>
 </head>
+
+
+
+
 
 <body class="bg-neutral-950 text-neutral-200 pt-[80px]">
 
@@ -32,66 +23,57 @@
   <div id="nav-placeholder"></div>
 
 
-  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
-  <section id="home" class="hero-section px-6 pb-24">
 
-    <!-- Photo background (parallax via JS) -->
-    <div id="hero-photo-bg" class="hero-photo-bg"
-      style="background-image: url('assets/images/background2.jpg');"></div>
 
-    <!-- Dark overlay -->
-    <div class="absolute inset-0 bg-black/75" style="z-index:1;"></div>
 
-    <!-- Teal accent glow -->
-    <div class="absolute inset-0" style="z-index:2;
-      background: radial-gradient(ellipse at 15% 50%, rgba(45,212,191,0.10) 0%, transparent 55%),
-                  radial-gradient(ellipse at 85% 20%, rgba(14,165,233,0.07) 0%, transparent 50%);"></div>
+  <!-- HERO -->
+  <section id="home" class="aws-hero-bg px-6 pb-24">
 
-    <!-- Dot grid motif -->
-    <div class="dot-grid-overlay" style="z-index:3;"></div>
+    <!-- dark overlay -->
+    <div class="aws-hero-overlay"></div>
 
-    <!-- Neural network canvas -->
-    <canvas id="neural-canvas"
-      style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:4;"></canvas>
-
-    <!-- Content -->
-    <div class="hero-content" style="padding-top:8rem; padding-bottom:4rem;">
+    <!-- content -->
+    <div class="aws-hero-content pt-32">
       <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
         <!-- LEFT TEXT -->
         <div>
-          <p class="hero-subtitle">Data Science & Analytics</p>
-
-          <h1 class="hero-headline mb-6"
-            aria-label="Transforming Data into Business Intelligence">
-            <span class="hero-word"><span class="hero-word-inner">Transforming</span></span>
-            <span class="hero-word"><span class="hero-word-inner">Data</span></span>
-            <span class="hero-word"><span class="hero-word-inner">into</span></span><br>
-            <span class="hero-word"><span class="hero-word-inner">Business</span></span>
-            <span class="hero-word"><span class="hero-word-inner">Intelligence</span></span>
-          </h1>
-
-          <p class="hero-role-line">Data Scientist · Machine Learning · Business Intelligence</p>
-
-          <p class="hero-body">
-            I design analytical systems, machine learning models, and decision-ready
-            dashboards with a strong focus on clarity, performance, and business impact.
+          <p class="text-sm text-teal-400 mb-3 tracking-wide uppercase">
+            Data Science & Analytics
           </p>
 
-          <div class="flex gap-4 flex-wrap">
-            <a href="#projects" class="btn-primary">View Work</a>
-            <a href="contact.html" class="btn-outline">Contact</a>
+          <h1 class="text-5xl font-semibold text-neutral-100 mb-6 leading-tight">
+            <span id="hero-typewriter"></span><span class="typewriter-cursor"></span>
+          </h1>
+
+          <p class="text-xl text-neutral-300 mb-6">
+            Data Scientist · Machine Learning · Business Intelligence
+          </p>
+
+          <p class="text-neutral-400 leading-relaxed mb-10 max-w-xl">
+            I design analytical systems, machine learning models, and decision-ready dashboards
+            with a strong focus on clarity, performance, and business impact.
+          </p>
+
+          <div class="flex gap-4">
+            <a href="#projects"
+              class="bg-teal-500 text-neutral-900 px-8 py-3 rounded-md text-sm font-medium hover:bg-teal-400 transition">
+              View Work
+            </a>
+            <a href="contact.html"
+              class="border border-neutral-700 text-neutral-300 px-8 py-3 rounded-md text-sm hover:border-neutral-500 transition">
+              Contact
+            </a>
           </div>
         </div>
 
         <!-- RIGHT CAROUSEL -->
-        <div class="glass-card-subtle overflow-hidden relative">
+        <div class="relative bg-neutral-950 border border-neutral-800 rounded-lg overflow-hidden">
 
           <div id="carousel" class="relative w-full">
 
             <!-- Slide 1 -->
-            <a href="projects/churn.html"
-              class="carousel-slide visible-slide w-full block cursor-pointer relative">
+            <a href="projects/churn.html" class="carousel-slide visible-slide w-full block cursor-pointer relative">
               <img src="assets/images/dashboard1.png" class="w-full h-auto object-cover rounded-lg"
                 alt="Customer Churn Prediction Dashboard">
               <div
@@ -129,13 +111,14 @@
             class="absolute left-2 top-1/2 -translate-y-1/2 px-3 py-2 bg-neutral-900/70 text-neutral-300 rounded-md hover:bg-neutral-800 z-10">
             ‹
           </button>
+
           <button id="nextBtn"
             class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-2 bg-neutral-900/70 text-neutral-300 rounded-md hover:bg-neutral-800 z-10">
             ›
           </button>
 
           <!-- DOTS -->
-          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
             <span class="dot w-3 h-3 rounded-full bg-teal-400"></span>
             <span class="dot w-3 h-3 rounded-full bg-neutral-600"></span>
             <span class="dot w-3 h-3 rounded-full bg-neutral-600"></span>
@@ -144,18 +127,50 @@
         </div>
       </div>
     </div>
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
 
-    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"
-      style="z-index:10;"></div>
   </section>
 
 
-  <!-- ═══════════════════════════ PROJECTS ══════════════════════════════ -->
-  <section id="projects" class="projects-section">
-    <div class="projects-content max-w-7xl mx-auto">
+  <!-- CAROUSEL STYLES -->
+  <style>
+    .carousel-slide {
+      transition: opacity 0.7s ease;
+    }
 
+    .visible-slide {
+      opacity: 1;
+      position: relative;
+    }
+
+    .hidden-slide {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+    }
+
+    /* Hover polish */
+    .carousel-slide img {
+      transition: transform 0.4s ease;
+    }
+
+    .carousel-slide:hover img {
+      transform: scale(1.01);
+    }
+  </style>
+
+
+
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 px-6 bg-neutral-900/40">
+    <div class="max-w-7xl mx-auto">
       <div class="mb-14">
-        <h2 class="text-3xl font-semibold text-neutral-100 mb-3">Selected Work</h2>
+        <h2 class="text-3xl font-semibold text-neutral-100 mb-3">
+          Selected Work
+        </h2>
         <div class="gradient-divider"></div>
         <p class="text-neutral-400 max-w-2xl">
           A selection of analytical projects focused on operational insight,
@@ -165,84 +180,113 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <!-- SmartChurn -->
-        <a href="projects/churn.html"
-          class="reveal block glass-card-subtle overflow-hidden accent-border">
-          <div class="relative aspect-video flex items-center justify-center bg-neutral-950/60 overflow-hidden">
-            <div class="absolute inset-0"
-              style="background: radial-gradient(ellipse at 50% 60%, rgba(45,212,191,0.15) 0%, transparent 70%)"></div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
-              stroke="currentColor" class="w-16 h-16 text-teal-400/75 relative z-10">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+        <!-- Card -->
+        <a href="projects/churn.html" class="reveal block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+                  hover:border-teal-500/40 transition">
+
+          <div class="relative aspect-video flex items-center justify-center bg-neutral-950 overflow-hidden">
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 60%, rgba(45,212,191,0.15) 0%, transparent 70%)"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-16 h-16 text-teal-400/75 relative z-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
             </svg>
           </div>
+
           <div class="p-4">
             <p class="text-xs text-neutral-500 mb-1">ML & AI</p>
-            <h3 class="text-neutral-100 font-medium mb-2">SmartChurn: Retention AI</h3>
-            <span class="text-sm text-teal-400">View project →</span>
+            <h3 class="text-neutral-100 font-medium mb-2">
+              SmartChurn: Retention AI
+            </h3>
+            <span class="text-sm text-teal-400">
+              View project →
+            </span>
           </div>
         </a>
 
-        <!-- Pulse -->
-        <a href="projects/employee-sentiment.html"
-          class="reveal reveal-delay-1 block glass-card-subtle overflow-hidden accent-border">
-          <div class="relative aspect-video flex items-center justify-center bg-neutral-950/60 overflow-hidden">
-            <div class="absolute inset-0"
-              style="background: radial-gradient(ellipse at 50% 60%, rgba(251,191,36,0.15) 0%, transparent 70%)"></div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
-              stroke="currentColor" class="w-16 h-16 text-amber-400/75 relative z-10">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+
+        <a href="projects/employee-sentiment.html" class="reveal reveal-delay-1 block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+                    hover:border-amber-500/40 transition cursor-pointer">
+
+          <div class="relative aspect-video flex items-center justify-center bg-neutral-950 overflow-hidden">
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 60%, rgba(251,191,36,0.15) 0%, transparent 70%)"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-16 h-16 text-amber-400/75 relative z-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
             </svg>
           </div>
+
           <div class="p-4">
             <p class="text-xs text-neutral-500 mb-1">BI & Visualisation</p>
-            <h3 class="text-neutral-100 font-medium mb-2">Pulse: Live Brand Sentiment</h3>
-            <span class="text-sm text-amber-400">View project →</span>
+            <h3 class="text-neutral-100 font-medium mb-2">
+              Pulse: Live Brand Sentiment
+            </h3>
+            <span class="text-sm text-amber-400 pointer-events-none">
+              View project →
+            </span>
           </div>
         </a>
 
-        <!-- DemandAI -->
-        <a href="projects/sales-forecasting.html"
-          class="reveal reveal-delay-2 block glass-card-subtle overflow-hidden accent-border">
-          <div class="bg-neutral-950/60 aspect-video flex items-center justify-center">
+
+
+        <!-- Card -->
+        <a href="projects/sales-forecasting.html" class="reveal reveal-delay-2 block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+                          hover:border-emerald-500/40 transition cursor-pointer">
+
+
+
+          <div class="bg-neutral-800 aspect-video flex items-center justify-center">
             <img src="assets/images/databricks.svg" alt="Sales Forecasting" class="w-32 h-32" />
           </div>
+
+
+
+
           <div class="p-4">
             <p class="text-xs text-neutral-500 mb-1">Data Platforms</p>
             <h3 class="text-neutral-100 font-medium mb-2">DemandAI: Sales Data Platform</h3>
-            <span class="text-sm text-emerald-400">View project →</span>
+            <span class="text-sm text-emerald-400 pointer-events-none">View project →</span>
           </div>
         </a>
 
-        <!-- Coastal Analytics -->
-        <a href="projects/coastal-analytics.html"
-          class="reveal reveal-delay-3 block glass-card-subtle overflow-hidden accent-border">
-          <div class="bg-neutral-950/60 aspect-video flex items-center justify-center">
+
+
+        <a href="projects/coastal-analytics.html" class="reveal reveal-delay-3 block bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden card-hover accent-border
+                      hover:border-indigo-500/40 transition cursor-pointer">
+
+          <div class="bg-neutral-800 aspect-video flex items-center justify-center">
             <img src="assets/images/powerbi.png" alt="BI" class="w-24 h-24" />
           </div>
+
           <div class="p-4">
             <p class="text-xs text-neutral-500 mb-1">Data Engineering</p>
-            <h3 class="text-neutral-100 font-medium mb-2">Coastal Analytics</h3>
-            <span class="text-sm text-emerald-400">View project →</span>
+            <h3 class="text-neutral-100 font-medium mb-2">
+              Coastal Analytics
+            </h3>
+            <span class="text-sm text-emerald-400 pointer-events-none">
+              View project →
+            </span>
           </div>
         </a>
+
 
       </div>
     </div>
   </section>
 
-
-  <!-- ════════════════════════════ SKILLS ═══════════════════════════════ -->
+  <!-- SKILLS -->
   <section id="skills" class="aws-section-bg px-6 py-28">
     <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-neutral-950 to-transparent"></div>
+
+    <!-- overlay -->
     <div class="aws-section-overlay"></div>
+
+    <!-- content -->
     <div class="aws-section-content">
       <div class="max-w-7xl mx-auto">
 
         <div class="mb-14">
-          <h2 class="text-3xl font-semibold text-neutral-100 mb-4">Technical Skills</h2>
+
+          <h2 class="text-3xl font-semibold text-neutral-100 mb-4">
+            Technical Skills
+          </h2>
           <div class="gradient-divider"></div>
           <p class="text-neutral-400 max-w-3xl text-sm">
             Focused on end-to-end analytics, production machine learning, and decision-driven BI solutions.
@@ -251,49 +295,57 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
 
-          <div class="reveal glass-card p-6">
+          <!-- ML / AI -->
+          <div class="reveal bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
             <h3 class="text-teal-400 font-medium">Machine Learning & AI</h3>
-            <div class="h-px bg-teal-400/20 my-3"></div>
+            <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
               Scikit-learn • TensorFlow • PyTorch • Keras • Hugging Face • Transformers • XGBoost • LightGBM
             </p>
           </div>
 
-          <div class="reveal reveal-delay-1 glass-card p-6 md:col-span-2 lg:col-span-1">
+          <!-- BI -->
+          <div
+            class="reveal reveal-delay-1 bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg md:col-span-2 lg:col-span-1">
             <h3 class="text-amber-300 font-medium">BI, Visualisation & Automation</h3>
-            <div class="h-px bg-amber-300/20 my-3"></div>
+            <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
               Power BI • Tableau • Plotly • Power Automate • Power Apps • Zapier • APIs • Agents SDK
             </p>
           </div>
 
-          <div class="reveal reveal-delay-2 glass-card p-6">
+          <!-- Data Platforms -->
+          <div class="reveal reveal-delay-2 bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
             <h3 class="text-emerald-400 font-medium">Data Platforms</h3>
-            <div class="h-px bg-emerald-400/20 my-3"></div>
+            <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
               Azure • AWS • Databricks • Snowflake • BigQuery • EC2 • S3 • DataLake
             </p>
           </div>
 
-          <div class="reveal reveal-delay-3 glass-card p-6">
+          <!-- Databases -->
+          <div class="reveal reveal-delay-3 bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
             <h3 class="text-indigo-400 font-medium">Databases</h3>
-            <div class="h-px bg-indigo-400/20 my-3"></div>
+            <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
               MySQL • PostgreSQL • Redis • DynamoDB • ElasticSearch • GraphDB
             </p>
           </div>
 
-          <div class="reveal reveal-delay-4 glass-card p-6">
+          <!-- Programming -->
+          <div class="reveal reveal-delay-4 bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg">
             <h3 class="text-cyan-400 font-medium">Programming</h3>
-            <div class="h-px bg-cyan-400/20 my-3"></div>
+            <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
               Python • R • SQL • JavaScript
             </p>
           </div>
 
-          <div class="reveal glass-card p-6 md:col-span-2 lg:col-span-3">
-            <h3 class="text-neutral-200 font-medium">Engineering & Delivery Practices</h3>
-            <div class="h-px bg-neutral-200/10 my-3"></div>
+          <!-- Engineering -->
+          <div
+            class="bg-neutral-900/90 backdrop-blur border border-neutral-800 p-6 rounded-lg md:col-span-2 lg:col-span-3">
+            <h3 class="text-white-400 font-medium">Engineering & Delivery Practices</h3>
+            <div class="h-px bg-neutral-800 my-3"></div>
             <p class="text-neutral-400 text-sm">
               Docker • Git • CI/CD • ETL Pipelines • A/B Testing • Multi-agent Workflows • Automation Scripts
             </p>
@@ -303,172 +355,102 @@
       </div>
     </div>
     <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-neutral-950 to-transparent"></div>
+
   </section>
+
+
+
 
 
   <!-- FOOTER -->
   <footer id="contact" class="border-t border-neutral-800 py-10 text-center text-sm text-neutral-500">
     <div class="flex justify-center gap-5 mb-4">
-      <a href="https://github.com/bolat-t" target="_blank" rel="noopener" aria-label="GitHub"
-        class="text-neutral-500 hover:text-neutral-200 transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-        </svg>
+      <a href="https://github.com/bolat-t" target="_blank" rel="noopener" aria-label="GitHub" class="text-neutral-500 hover:text-neutral-200 transition">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
       </a>
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"
-        class="text-neutral-500 hover:text-neutral-200 transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-        </svg>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-200 transition">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
     </div>
     © 2026 Bolat Tulekov
   </footer>
 
-
+  <!-- Scripts -->
   <script src="assets/js/nav.js"></script>
   <script>
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".carousel-slide");
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("visible-slide", i === index);
+        slide.classList.toggle("hidden-slide", i !== index);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("bg-teal-400", i === index);
+        dot.classList.toggle("bg-neutral-600", i !== index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Attach event listeners
     document.addEventListener('DOMContentLoaded', () => {
-
-      // ── Carousel ──────────────────────────────────────────────────────
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.carousel-slide');
-      const dots   = document.querySelectorAll('.dot');
-
-      function showSlide(n) {
-        slides.forEach((s, i) => {
-          s.classList.toggle('visible-slide', i === n);
-          s.classList.toggle('hidden-slide',  i !== n);
-        });
-        dots.forEach((d, i) => {
-          d.classList.toggle('bg-teal-400',    i === n);
-          d.classList.toggle('bg-neutral-600', i !== n);
-        });
-      }
-
-      document.getElementById('nextBtn')?.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      });
-      document.getElementById('prevBtn')?.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-      });
-
-      // ── Scroll reveal ─────────────────────────────────────────────────
+      document.getElementById('nextBtn')?.addEventListener('click', nextSlide);
+      document.getElementById('prevBtn')?.addEventListener('click', prevSlide);
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Intersection Observer for reveal animations
       const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
       }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-      // ── Scroll progress bar ───────────────────────────────────────────
+      // Typewriter on hero heading
+      const heroText = ['Transforming Data into\nBusiness Intelligence'];
+      const target = document.getElementById('hero-typewriter');
+      const cursor = document.querySelector('.typewriter-cursor');
+      const fullText = 'Transforming Data into\nBusiness Intelligence';
+      let i = 0;
+      function type() {
+        if (i < fullText.length) {
+          const ch = fullText[i];
+          if (ch === '\n') {
+            target.appendChild(document.createElement('br'));
+          } else {
+            target.appendChild(document.createTextNode(ch));
+          }
+          i++;
+          setTimeout(type, i < 22 ? 55 : 45);
+        } else {
+          // Stop blinking cursor after a short pause
+          setTimeout(() => { if (cursor) cursor.style.display = 'none'; }, 2000);
+        }
+      }
+      setTimeout(type, 300);
+
+      // Scroll progress bar
       const bar = document.getElementById('scroll-progress');
       window.addEventListener('scroll', () => {
         const scrolled = document.documentElement.scrollTop;
-        const total    = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         bar.style.width = (scrolled / total * 100) + '%';
       }, { passive: true });
-
-      // ── GSAP hero word reveal ─────────────────────────────────────────
-      if (typeof gsap !== 'undefined') {
-        gsap.to('.hero-word-inner', {
-          translateY: '0%',
-          opacity: 1,
-          duration: 0.9,
-          stagger: 0.12,
-          ease: 'power3.out',
-          delay: 0.3
-        });
-      }
-
-      // ── iOS-safe pseudo-parallax ──────────────────────────────────────
-      const photoBg = document.getElementById('hero-photo-bg');
-      if (photoBg) {
-        window.addEventListener('scroll', () => {
-          photoBg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
-        }, { passive: true });
-      }
-
-      // ── Neural network canvas ─────────────────────────────────────────
-      const canvas = document.getElementById('neural-canvas');
-      if (!canvas) return;
-
-      const ctx    = canvas.getContext('2d');
-      const mobile = window.innerWidth < 768;
-      const COUNT  = mobile ? 28 : 55;
-      const DIST   = mobile ? 110 : 145;
-
-      let particles = [];
-      let animId;
-
-      function resize() {
-        const hero  = canvas.parentElement;
-        canvas.width  = hero.offsetWidth;
-        canvas.height = hero.offsetHeight;
-      }
-
-      function init() {
-        particles = Array.from({ length: COUNT }, () => ({
-          x:  Math.random() * canvas.width,
-          y:  Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.45,
-          vy: (Math.random() - 0.5) * 0.45,
-          r:  Math.random() * 1.8 + 0.8
-        }));
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // move & bounce
-        particles.forEach(p => {
-          p.x += p.vx;
-          p.y += p.vy;
-          if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
-          if (p.y < 0 || p.y > canvas.height)  p.vy *= -1;
-
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(45,212,191,0.6)';
-          ctx.fill();
-        });
-
-        // connections
-        for (let i = 0; i < particles.length; i++) {
-          for (let j = i + 1; j < particles.length; j++) {
-            const dx   = particles[i].x - particles[j].x;
-            const dy   = particles[i].y - particles[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < DIST) {
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = `rgba(45,212,191,${0.18 * (1 - dist / DIST)})`;
-              ctx.lineWidth   = 0.8;
-              ctx.stroke();
-            }
-          }
-        }
-
-        animId = requestAnimationFrame(draw);
-      }
-
-      // Pause when tab is hidden (battery / iOS)
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          cancelAnimationFrame(animId);
-        } else {
-          draw();
-        }
-      });
-
-      window.addEventListener('resize', () => { resize(); init(); }, { passive: true });
-
-      resize();
-      init();
-      draw();
     });
   </script>
 </body>
