@@ -256,3 +256,192 @@ html {
     pointer-events: none;
 }
 
+/* ─────────────────────────────────────────
+   Creative Redesign — 2026
+   ───────────────────────────────────────── */
+
+/* Display typography */
+.font-display {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+}
+
+/* ── Hero section ── */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    margin-top: -4rem;
+    min-height: 90vh;
+}
+
+.hero-photo-bg {
+    position: absolute;
+    inset: -10%;
+    background-size: cover;
+    background-position: center 40%;
+    will-change: transform;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.hero-headline {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+    line-height: 1.12;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2dd4bf;
+    opacity: 0.85;
+    margin-bottom: 1rem;
+}
+
+.hero-role-line {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: rgba(230, 235, 235, 0.80);
+    margin-bottom: 1.25rem;
+}
+
+.hero-body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: rgba(210, 220, 220, 0.65);
+    max-width: 42ch;
+    margin-bottom: 2.5rem;
+}
+
+/* ── Dot grid motif ── */
+.dot-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(45, 212, 191, 0.18) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+/* ── Glassmorphism cards ── */
+.glass-card {
+    background: rgba(10, 12, 22, 0.50);
+    backdrop-filter: blur(14px) saturate(1.5);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    border: 1px solid rgba(45, 212, 191, 0.14);
+    border-radius: 0.75rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(45, 212, 191, 0.35);
+    box-shadow: 0 0 32px rgba(45, 212, 191, 0.10), 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-subtle {
+    background: rgba(15, 17, 28, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 0.75rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card-subtle:hover {
+    border-color: rgba(45, 212, 191, 0.25);
+    box-shadow: 0 16px 40px rgba(45, 212, 191, 0.10), 0 4px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-6px);
+}
+
+/* ── Buttons ── */
+.btn-primary {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: #2dd4bf;
+    color: #0a0f0f;
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #5eead4;
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.35);
+}
+
+.btn-outline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(210, 220, 220, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    transition: border-color 0.2s ease;
+    display: inline-block;
+}
+
+.btn-outline:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* ── Projects section with subtle bg image ── */
+.projects-section {
+    position: relative;
+    padding: 6rem 1.5rem;
+    overflow: hidden;
+}
+
+.projects-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.06;
+    z-index: 0;
+}
+
+.projects-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #070810;
+    z-index: -1;
+}
+
+.projects-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ── GSAP word-reveal ── */
+.hero-word {
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 0.22em;
+    vertical-align: bottom;
+}
+
+.hero-word-inner {
+    display: inline-block;
+    transform: translateY(110%);
+    opacity: 0;
+}
